@@ -1,0 +1,49 @@
+# DEFINE EL NOMBRE DE LA ACCIÓN DE GITHUB
+name: AUTOMATIZAR EL PROCESO DE DESPLIEGUE DE UNA APLICACIÓN WEB EN GITHUB PAGES
+
+# DARLE PERMISOS DE ESCRITURA
+permissions:
+  contents: write
+
+# DEFINIR CUÁNDO SE DEBE EJECUTAR LA ACCIÓN DE GITHUB: en cada push a la rama main
+on:
+  push:
+    branches:
+      - main
+
+# DEFINIR LOS TRABAJOS A EJECUTAR DENTRO DE LA ACCIÓN DE GITHUB
+jobs:
+  # DEFINE EL TRABAJO "DEPLOY"
+  deploy:
+    # DEFINE EL SISTEMA OPERATIVO A UTILIZAR
+    runs-on: ubuntu-latest
+
+    # DEFINIR LOS PASOS NECESARIOS PARA LA EJECUCIÓN DE LA ACCIÓN
+    steps:
+      # CLONAR EL REPOSITORIO
+      - name: DESCARGA EL CÓDIGO DE GITHUB AL ESPACIO DE TRABAJO ACTUAL
+        uses: actions/checkout@v3
+
+      - name: INSTALA LA VERSIÓN 16 DE NODE.JS Y ESTABLECE EL CACHÉ NPM.
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: INSTALAR YARN
+        run: npm install -g yarn
+
+      - name: INSTALAR DEPENDENCIAS DE NODE CON YARN - congelando la resolución de dependencias en el archivo yarn.lock
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+          touch dist/.nojekyll
+
+      # .nojekyll Este archivo indica a GitHub Pages que no aplique Jekyll al sitio web, lo cual puede causar problemas de visualización si el sitio no está construido con Jekyll.
+
+      - name: DESPLEGAR EL PROYECTO, LA CARPETA DIST EN LA RAMA GH-PAGES
+        # https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
