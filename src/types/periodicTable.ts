@@ -1,3 +1,8 @@
+export type Data = {
+  title: string,
+  elements: ItemHTML[]
+}
+
 export type ItemHTML = {
   tag: string,
   group: VariantGroup,

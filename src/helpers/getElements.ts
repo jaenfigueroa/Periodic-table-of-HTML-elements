@@ -1,11 +1,10 @@
 export const getElements = async () => {
-  // const URL = '/data/elements.json'
-  const URL = 'https://raw.githubusercontent.com/jaenfigueroa/Periodic-table-of-HTML-elements/main/data/elements.json'
+  const URL = 'public/data/elements.json'
 
   try {
     const response = await fetch(URL)
-    const elements = await response.json()
-    return elements
+    const data = await response.json()
+    return data
   } catch (error) {
     console.log(error)
   }

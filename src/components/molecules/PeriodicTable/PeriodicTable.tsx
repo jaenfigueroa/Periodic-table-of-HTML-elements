@@ -6,11 +6,13 @@ type Props = {
   periodicContent: ItemHTML[]
 }
 
-export const PeriodicTable = ({periodicContent}:Props) => {
+export const PeriodicTable = ({ periodicContent }: Props) => {
+  const arrayPeriodicContent = Array.from(periodicContent)
+
   return (
     <div className='PeriodicTable'>
       {
-        periodicContent.map((element, index) => (
+        arrayPeriodicContent.map((element, index) => (
           <Element key={index} text={element.tag} variant={element.group}/>
         ))
       }

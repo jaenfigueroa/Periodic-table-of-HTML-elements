@@ -6,8 +6,7 @@ type Props = {
   mainContent: ItemHTML[]
 }
 
-export const DefaultLayout = ({mainContent}:Props) => {
-
+export const DefaultLayout = ({ mainContent }:Props) => {
   return (
     <div>
       <Main mainContent={mainContent} />

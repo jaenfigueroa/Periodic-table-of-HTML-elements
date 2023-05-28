@@ -9,6 +9,7 @@ type Props = {
 }
 
 export const Main = ({ mainContent }: Props) => {
+
   return (
     <div className='main'>
       <Title text={'Periodic table of HTML elements' } />

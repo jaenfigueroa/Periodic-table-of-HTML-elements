@@ -2,17 +2,25 @@ import './Home.scss'
 import { DefaultLayout } from '../../components/templates/DefaultLayout/DefaultLayout'
 import { getElements } from '../../helpers/getElements'
 import {useState, useEffect} from 'react'
-import { ItemHTML } from '../../types/periodicTable'
+import { Data } from '../../types/periodicTable'
 
 export const Home = () => {
-  const [elements, setElements] = useState<ItemHTML[]>([])
+  const [data, setData] = useState<Data>()
 
   useEffect(() => {
     getElements()
-      .then(data => setElements(data))
+      .then(data => {
+        setData(data)
+      })
   }, [])
 
   return (
-    <DefaultLayout mainContent={elements}/>
+    <>
+      {
+        data && <DefaultLayout
+          mainContent={data.elements}
+        />
+      }
+    </>
   )
 }
