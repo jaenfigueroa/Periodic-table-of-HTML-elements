@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   transition: 100ms;
-  // background: white;
-  // outline: 1px solid rgb(0, 0, 0);
+  outline: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: .6rem;
 
   p {
@@ -20,39 +19,39 @@
   }
 
   &--green {
-    background: rgb(135, 255, 135);
+    background: linear-gradient(#87ff87, darken(#87ff87, 5));
   }
 
   &--blue {
-    background: #8391e3;
+    background: linear-gradient(#8391e3, darken(#8391e3, 5));
   }
 
   &--violet {
-    background: #f88ff8;
+    background: linear-gradient(#f88ff8, darken(#f88ff8, 5));
   }
 
   &--yellow {
-    background: #eaea6b;
+    background: linear-gradient(#eaea6b, darken(#eaea6b, 5));
   }
 
   &--orange {
-    background: #f9995e;
+    background: linear-gradient(#f9995e, darken(#f9995e, 5));
   }
 
   &--green2 {
-    background: #5ad660;
+    background: linear-gradient(#5ad660, darken(#5ad660, 5));
   }
 
   &--blue2 {
-    background: #a3b0ff;
+    background: linear-gradient(#a3b0ff, darken(#a3b0ff, 5));
   }
 
   &--orange2 {
-    background: #f46a65;
+    background: linear-gradient(#ff6363, darken(#ff6363, 5));
   }
 
   &--gray {
-    background: #ceced0;
+    background: linear-gradient(#ceced0, darken(#ceced0, 5));
   }
 
   // p {

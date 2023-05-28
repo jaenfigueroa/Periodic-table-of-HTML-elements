@@ -6,12 +6,13 @@ export type ItemHTML = {
 }
 
 export type VariantGroup =
-  'Root element' |
-  'Metadata and scripting' |
-  'Embedding content' |
-  'Text-level semantics' |
-  'Grouping content' |
-  'Forms' |
-  'Document sections' |
-  'Tabular data' |
-  'Interactive elements'
+  'Root element' | /* VERDE CLARO */
+  'Text-level semantics' | /* AMARILLO */
+  'Forms' | /* VERDE */
+  'Tabular data' | /* NARANJA 2 */
+  'Metadata and scripting' | /* BLUE */
+  'Grouping content' | /* NARANJA 1 */
+  'Document sections' | /* AZUL 2 */
+  'Interactive elements' | /* GRIS */
+  'Embedding content' /* MORADO */
+
