@@ -1,5 +1,5 @@
-import { Footer } from '../../atoms/Footer/Footer'
-import { Header } from '../../atoms/Header/Header'
+import { Footer } from '../../molecules/Footer/Footer'
+import { Header } from '../../molecules/Header/Header'
 import { Content } from '../../organisms/Content/Content'
 import './DefaultLayout.scss'
 
