@@ -5,11 +5,9 @@ import './Content.scss'
 
 export const Content = () => {
   return (
-    <div>
+    <div className='content'>
       <Title text={'Periodic table of HTML elements' } />
-      <div className='content'>
-        <PeriodicTable />
-      </div>
+      <PeriodicTable />
       <Distribution/>
     </div>
   )
