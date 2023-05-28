@@ -1,9 +1,13 @@
 import './Title.scss'
 
-export const Title = () => {
+type Props = {
+  text: string
+}
+
+export const Title = ({text}:Props) => {
   return (
     <header className='Title'>
-      <p>Tabla periodica de elementos HTML</p>
+      <p>{text}</p>
     </header>
   )
 }

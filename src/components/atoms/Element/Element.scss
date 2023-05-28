@@ -6,10 +6,15 @@
   outline: 1px solid rgb(0, 0, 0);
   background: white;
   transition: 100ms;
+  background: #afffb5;
 
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
     transform: scale(1.5);
+  }
+
+  p {
+    font-size: clamp(1rem, 2vw, 2rem);
   }
 }

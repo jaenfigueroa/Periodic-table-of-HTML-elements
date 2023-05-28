@@ -1,4 +1,4 @@
-import './style.scss'
+import './Element.scss'
 
 type Props = {
   variant: string
@@ -8,7 +8,7 @@ type Props = {
 export const Element = ({variant, text}: Props) => {
   return (
     <div className={`element ${variant}`}>
-      {text}
+      <p>{text}</p>
     </div>
   )
 }

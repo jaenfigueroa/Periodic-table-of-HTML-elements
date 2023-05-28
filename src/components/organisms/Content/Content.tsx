@@ -6,7 +6,7 @@ import './Content.scss'
 export const Content = () => {
   return (
     <div>
-      <Title />
+      <Title text={'Periodic table of HTML elements' } />
       <div className='content'>
         <PeriodicTable />
       </div>
