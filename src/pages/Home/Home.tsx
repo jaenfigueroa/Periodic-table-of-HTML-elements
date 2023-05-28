@@ -1,8 +1,12 @@
 import './Home.scss'
-import { } from 'react'
+import { DefaultLayout } from '../../components/templates/DefaultLayout/DefaultLayout'
+import { ElementProvider } from '../../context/ElementsContext'
 
 export const Home = () => {
+
   return (
-    <div>Home</div>
+    <ElementProvider>
+      <DefaultLayout />
+    </ElementProvider>
   )
 }

@@ -1,4 +1,4 @@
-import { Home } from './components/templates/Home/Home'
+import { Home } from './pages/Home/Home'
 import './styles/index.scss'
 
 export const App = () => {
