@@ -1,0 +1,10 @@
+.distribution {
+  border: 1px solid green;
+  padding: clamp(1.6rem, 5vw, 3rem);
+  display: grid;
+  justify-items: center;
+
+  p {
+    text-align: center;
+  }
+}
