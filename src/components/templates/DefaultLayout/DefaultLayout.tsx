@@ -1,14 +1,20 @@
-import { Footer } from '../../molecules/Footer/Footer'
-import { Header } from '../../molecules/Header/Header'
-import { Content } from '../../organisms/Content/Content'
 import './DefaultLayout.scss'
+// import { Footer } from '../../organisms/Footer/Footer'
+// import { Header } from '../../organisms/Header/Header'
+import { Main } from '../../organisms/Main/Main'
+import { ItemHTML } from '../../../types/periodicTable'
 
-export const DefaultLayout = () => {
+type Props = {
+  mainContent: ItemHTML[]
+}
+
+export const DefaultLayout = ({mainContent}:Props) => {
+
   return (
     <div>
-      <Header/>
-      <Content />
-      <Footer/>
+      {/* <Header/> */}
+      <Main mainContent={mainContent} />
+      {/* <Footer/> */}
     </div>
   )
 }

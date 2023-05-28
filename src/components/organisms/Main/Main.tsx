@@ -1,13 +1,18 @@
 import { Distribution } from '../../molecules/Distribution/Distribution'
 import { Title } from '../../atoms/Title/Title'
 import { PeriodicTable } from '../../molecules/PeriodicTable/PeriodicTable'
-import './Content.scss'
+import './Main.scss'
+import { ItemHTML } from '../../../types/periodicTable'
 
-export const Content = () => {
+type Props = {
+  mainContent: ItemHTML[]
+}
+
+export const Main = ({ mainContent }: Props) => {
   return (
-    <div className='content'>
+    <div className='main'>
       <Title text={'Periodic table of HTML elements' } />
-      <PeriodicTable />
+      <PeriodicTable periodicContent={mainContent} />
       <Distribution/>
     </div>
   )

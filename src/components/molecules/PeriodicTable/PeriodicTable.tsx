@@ -1,20 +1,19 @@
+import { ItemHTML } from '../../../types/periodicTable'
 import { Element } from '../../atoms/Element/Element'
 import './PeriodicTable.scss'
 
-export const PeriodicTable = () => {
+type Props = {
+  periodicContent: ItemHTML[]
+}
 
-  /* CREAR LOS 200 ELEMENTOS */
-  const elements = Array.from({ length: 106 }, (_, index) => {
-    const text = (index + 1).toString();
-    const variant = 'green'; // Variante deseada para los elementos
-
-    return <Element key={index} text={text} variant={variant} />;
-  })
-
+export const PeriodicTable = ({periodicContent}:Props) => {
   return (
     <div className='PeriodicTable'>
-      {elements}
-      {/* <Element text='1' variant='green'/> */}
+      {
+        periodicContent.map((element, index) => (
+          <Element key={index} text={element.tag} variant={element.group}/>
+        ))
+      }
     </div>
   )
 }

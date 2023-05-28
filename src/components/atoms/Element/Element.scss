@@ -3,18 +3,59 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: 1px solid rgb(0, 0, 0);
-  background: white;
   transition: 100ms;
-  background: #afffb5;
+  // background: white;
+  // outline: 1px solid rgb(0, 0, 0);
+  border-radius: .6rem;
+
+  p {
+    text-align: center;
+  }
 
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
     transform: scale(1.5);
+
   }
 
-  p {
-    font-size: clamp(1rem, 2vw, 2rem);
+  &--green {
+    background: rgb(135, 255, 135);
   }
+
+  &--blue {
+    background: #8391e3;
+  }
+
+  &--violet {
+    background: #f88ff8;
+  }
+
+  &--yellow {
+    background: #eaea6b;
+  }
+
+  &--orange {
+    background: #f9995e;
+  }
+
+  &--green2 {
+    background: #5ad660;
+  }
+
+  &--blue2 {
+    background: #a3b0ff;
+  }
+
+  &--orange2 {
+    background: #f46a65;
+  }
+
+  &--gray {
+    background: #ceced0;
+  }
+
+  // p {
+  //   font-size: clamp(1rem, 2vw, 2rem);
+  // }
 }

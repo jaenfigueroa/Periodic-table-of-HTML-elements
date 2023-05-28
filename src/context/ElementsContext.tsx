@@ -17,7 +17,7 @@ type Element = {
   description: string
 }
 
-const ElementsContext = createContext<ElementsContext>({} as ElementsContext)
+export const ElementsContext = createContext<ElementsContext>({} as ElementsContext)
 
 export const ElementProvider = ({children}:Props) => {
   const [elements, setElements] = useState<Element[]>([])

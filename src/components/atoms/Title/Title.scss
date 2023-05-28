@@ -1,5 +1,5 @@
 .Title {
-  border: 1px solid green;
+  border: 1px dashed green;
   display: grid;
   justify-items: center;
   padding: clamp(1.6rem, 5vw, 3rem);
@@ -7,5 +7,6 @@
   p {
     font-size: clamp(1rem, 5vw, 3.5rem);
     text-align: center;
+    color: white;
   }
 }
