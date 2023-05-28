@@ -1,10 +1,11 @@
 .distribution {
-  border: 1px dashed green;
   padding: clamp(1.6rem, 5vw, 3rem);
   display: grid;
   justify-items: center;
+  // border: 1px dashed green;
 
   p {
     text-align: center;
+    color: white;
   }
 }

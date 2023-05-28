@@ -5,7 +5,8 @@
   justify-content: center;
   transition: 100ms;
   outline: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: .6rem;
+  outline: 1px solid rgb(0, 0, 0);
+  border-radius: .4rem;
 
   p {
     text-align: center;
@@ -19,42 +20,42 @@
   }
 
   &--green {
-    background: linear-gradient(#87ff87, darken(#87ff87, 5));
+    background: linear-gradient(#87ff87, darken(#87ff87, 4));
   }
 
   &--blue {
-    background: linear-gradient(#8391e3, darken(#8391e3, 5));
+    background: linear-gradient(#8391e3, darken(#8391e3, 4));
   }
 
   &--violet {
-    background: linear-gradient(#f88ff8, darken(#f88ff8, 5));
+    background: linear-gradient(#f88ff8, darken(#f88ff8, 4));
   }
 
   &--yellow {
-    background: linear-gradient(#eaea6b, darken(#eaea6b, 5));
+    background: linear-gradient(#eaea6b, darken(#eaea6b, 4));
   }
 
   &--orange {
-    background: linear-gradient(#f9995e, darken(#f9995e, 5));
+    background: linear-gradient(#f9995e, darken(#f9995e, 4));
   }
 
   &--green2 {
-    background: linear-gradient(#5ad660, darken(#5ad660, 5));
+    background: linear-gradient(#5ad660, darken(#5ad660, 4));
   }
 
   &--blue2 {
-    background: linear-gradient(#a3b0ff, darken(#a3b0ff, 5));
+    background: linear-gradient(#a3b0ff, darken(#a3b0ff, 4));
   }
 
   &--orange2 {
-    background: linear-gradient(#ff6363, darken(#ff6363, 5));
+    background: linear-gradient(#ff6363, darken(#ff6363, 4));
   }
 
   &--gray {
-    background: linear-gradient(#ceced0, darken(#ceced0, 5));
+    background: linear-gradient(#ceced0, darken(#ceced0, 4));
   }
 
   // p {
-  //   font-size: clamp(1rem, 2vw, 2rem);
+  //   font-size: clamp(1rem, 2vw, 1.65rem);
   // }
 }
