@@ -1,3 +1,5 @@
+@use '/src/styles/mixins' as m;
+
 .element {
   aspect-ratio: 1/1;
   display: flex;
@@ -19,39 +21,5 @@
 
   }
 
-  &--green {
-    background: linear-gradient(#87ff87, darken(#87ff87, 4));
-  }
-
-  &--blue {
-    background: linear-gradient(#8391e3, darken(#8391e3, 4));
-  }
-
-  &--violet {
-    background: linear-gradient(#f88ff8, darken(#f88ff8, 4));
-  }
-
-  &--yellow {
-    background: linear-gradient(#eaea6b, darken(#eaea6b, 4));
-  }
-
-  &--orange {
-    background: linear-gradient(#f9995e, darken(#f9995e, 4));
-  }
-
-  &--green2 {
-    background: linear-gradient(#5ad660, darken(#5ad660, 4));
-  }
-
-  &--blue2 {
-    background: linear-gradient(#a3b0ff, darken(#a3b0ff, 4));
-  }
-
-  &--orange2 {
-    background: linear-gradient(#ff6363, darken(#ff6363, 4));
-  }
-
-  &--gray {
-    background: linear-gradient(#ceced0, darken(#ceced0, 4));
-  }
+  @include m.variantColors;
 }
