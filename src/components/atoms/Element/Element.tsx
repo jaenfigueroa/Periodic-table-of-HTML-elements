@@ -27,6 +27,7 @@ export const Element = ({ element }: Props) => {
         <i className='fa-solid fa-magnifying-glass'></i>
       </a>
       <p>{tag}</p>
+      <span>{group}</span>
     </div>
   )
 }

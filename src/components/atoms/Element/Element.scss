@@ -13,7 +13,22 @@
   p {
     text-align: center;
     font-size: clamp(1rem, 1.1vw, 2rem);
-    // font-size: clamp(1rem, 1.1vw, 1.6rem);
+    // font-family: "Segoe UI", sans-serif;
+  }
+
+  span {
+    position: absolute;
+    // font-size: .8rem;
+    font-size: .9rem;
+    font-size: clamp(.5rem, .6vw, .9rem);
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    bottom: .5rem;
+    // line-height: .6rem;
+    line-height: .85rem;
+    color: transparent;
+    // padding: 0 .2rem;
+    padding: 0 .3rem;
   }
 
   &:hover {
@@ -21,6 +36,10 @@
     z-index: 1;
     transform: scale(1.5);
     transform: scale(1.6);
+
+    span {
+      color: black;
+    }
   }
 
   i {
