@@ -24,18 +24,23 @@
     font-family: "Segoe UI", sans-serif;
     text-align: center;
     bottom: .5rem;
-    // line-height: .6rem;
     line-height: .85rem;
     color: transparent;
-    // padding: 0 .2rem;
     padding: 0 .3rem;
+
+    font-weight: 350;
+    font-size: .95rem;
+    font-size: .9rem;
+    line-height: .9rem;
+    line-height: 1rem;
   }
 
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
-    transform: scale(1.5);
-    transform: scale(1.6);
+    // transform: scale(1.6);
+    transform: scale(2);
+    transform: scale(1.9);
 
     span {
       color: black;
