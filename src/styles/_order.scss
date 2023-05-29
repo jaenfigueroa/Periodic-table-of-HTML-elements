@@ -1,0 +1,94 @@
+@mixin order () {
+
+  /* FILA 1 */
+  &:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &:nth-child(2) {
+    grid-row: 1;
+    grid-column: 17;
+  }
+
+  &:nth-child(3) {
+    grid-row: 1;
+    grid-column: 18;
+  }
+
+  /* FILA 2 */
+  &:nth-child(4) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  &:nth-child(5) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  @for $i from 6 through 13 {
+    &:nth-child(#{$i}) {
+      grid-row: 2;
+      grid-column: $i + 5;
+    }
+  }
+
+  /* FILA 3 */
+  &:nth-child(14) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  &:nth-child(15) {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  @for $i from 16 through 23 {
+    &:nth-child(#{$i}) {
+      grid-row: 3;
+      grid-column: $i - 5;
+    }
+  }
+
+  /* FILA 4 */
+  @for $i from 24 through 41 {
+    &:nth-child(#{$i}) {
+      grid-row: 4;
+      grid-column: $i - 23;
+    }
+  }
+
+  /* FILA 5 */
+  @for $i from 42 through 59 {
+    &:nth-child(#{$i}) {
+      grid-row: 5;
+      grid-column: $i - 41;
+    }
+  }
+
+  /* FILA 6 */
+  @for $i from 60 through 77 {
+    &:nth-child(#{$i}) {
+      grid-row: 6;
+      grid-column: $i - 59;
+    }
+  }
+
+  /* FILA 7 */
+  @for $i from 78 through 95 {
+    &:nth-child(#{$i}) {
+      grid-row: 7;
+      grid-column: $i - 77;
+    }
+  }
+
+  /* FILA 8 */
+  @for $i from 96 through 107 {
+    &:nth-child(#{$i}) {
+      grid-row: 9;
+      grid-column: $i - 89;
+    }
+  }
+}
