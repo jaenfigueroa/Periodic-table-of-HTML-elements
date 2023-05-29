@@ -7,19 +7,15 @@
   justify-content: center;
   transition: 100ms;
   outline: 1px solid rgb(0, 0, 0);
-  // border-radius: .4rem;
   position: relative;
 
   p {
     text-align: center;
     font-size: clamp(1rem, 1.1vw, 2rem);
-    // font-family: "Segoe UI", sans-serif;
   }
 
   span {
     position: absolute;
-    // font-size: .8rem;
-    font-size: .9rem;
     font-size: clamp(.5rem, .6vw, .9rem);
     font-family: "Segoe UI", sans-serif;
     text-align: center;
@@ -29,17 +25,13 @@
     padding: 0 .3rem;
 
     font-weight: 350;
-    font-size: .95rem;
     font-size: .9rem;
-    line-height: .9rem;
     line-height: 1rem;
   }
 
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
-    // transform: scale(1.6);
-    transform: scale(2);
     transform: scale(1.9);
 
     span {
@@ -59,10 +51,6 @@
     border-top: 0;
     padding: .4rem .6rem .6rem .4rem;
     border-radius: 0 0 1.1rem 0;
-
-    // color: transparent;
-    // background: transparent;
-    // border: 1px solid transparent;
 
     &:hover {
       background: white;

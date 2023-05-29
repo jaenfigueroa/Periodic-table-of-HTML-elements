@@ -4,17 +4,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  // border: 1px solid red;
 
   &__name {
     color: #f7f7f7;
-    // font-family: "Segoe UI", sans-serif;
   }
 
   &__color {
     width: 20px;
     height: 20px;
-    // border-radius: .3rem;
     border-radius: .5rem;
 
     @include m.variantColors
