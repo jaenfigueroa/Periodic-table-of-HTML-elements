@@ -29,12 +29,23 @@
     line-height: 1rem;
   }
 
+  h3 {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: transparent;
+    font-family: "Segoe UI", sans-serif;
+  }
+
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
     transform: scale(1.9);
 
-    span {
+    span,
+    h3 {
       color: black;
     }
   }

@@ -5,6 +5,7 @@ export type Data = {
 }
 
 export type ItemHTML = {
+  id: number
   tag: string,
   group: VariantGroup,
   url: string,
