@@ -1,0 +1,44 @@
+.github {
+  outline: 1px solid #d1d4d7;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: .3rem;
+  overflow: hidden;
+
+  div {
+    border: 1px solid #ced2d5;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .3rem .7rem;
+    color: black;
+    background: linear-gradient(#f7fcff 60%, #d0d7db);
+
+    p {
+      font-size: 1.4rem;
+      padding: 0;
+    }
+  }
+
+  &__box-1 {
+    i {
+      animation: girar 1.5s ease-out infinite;
+      font-size: 1.5rem;
+    }
+
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

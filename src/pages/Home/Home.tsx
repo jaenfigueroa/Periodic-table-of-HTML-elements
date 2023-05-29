@@ -1,8 +1,9 @@
 import './Home.scss'
-import { DefaultLayout } from '../../components/templates/DefaultLayout/DefaultLayout'
+import { PeriodicTable } from '../../components/organisms/PeriodicTable/PeriodicTable'
 import { getElements } from '../../helpers/getElements'
 import {useState, useEffect} from 'react'
 import { Data } from '../../types/periodicTable'
+import { Github } from '../../components/atoms/Github/Github'
 
 export const Home = () => {
   const [data, setData] = useState<Data>()
@@ -16,8 +17,9 @@ export const Home = () => {
 
   return (
     <>
+      <Github/>
       {
-        data && <DefaultLayout
+        data && <PeriodicTable
           mainContent={data.elements}
           distributionContent={data.distribution}
         />

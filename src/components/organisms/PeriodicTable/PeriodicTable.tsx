@@ -1,19 +1,19 @@
-import './DefaultLayout.scss'
+import './PeriodicTable.scss'
 import { ItemHTML } from '../../../types/periodicTable'
 import { Title } from '../../atoms/Title/Title'
 import { Distribution } from '../../molecules/Distribution/Distribution'
-import { PeriodicTable } from '../../molecules/PeriodicTable/PeriodicTable'
+import { Table } from '../../molecules/Table/Table'
 
 type Props = {
   mainContent: ItemHTML[]
   distributionContent: string[]
 }
 
-export const DefaultLayout = ({ mainContent,distributionContent }:Props) => {
+export const PeriodicTable = ({ mainContent,distributionContent }:Props) => {
   return (
-    <div className='defaultLayout'>
+    <div className='PeriodicTable'>
       <Title text={'Periodic table of HTML elements'} />
-      <PeriodicTable periodicContent={mainContent} />
+      <Table periodicContent={mainContent} />
       <Distribution distributionContent={distributionContent } />
     </div>
   )
