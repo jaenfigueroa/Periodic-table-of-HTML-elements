@@ -1,27 +1,16 @@
 import './Home.scss'
 import { PeriodicTable } from '../../components/organisms/PeriodicTable/PeriodicTable'
-import { getElements } from '../../helpers/getElements'
-import {useState, useEffect} from 'react'
-import { Data } from '../../types/periodicTable'
 import { Github } from '../../components/atoms/Github/Github'
+import { elementsData2 } from '../../data/elementsData2'
 
 export const Home = () => {
-  const [data, setData] = useState<Data>()
-
-  useEffect(() => {
-    getElements()
-      .then(data => {
-        setData(data)
-      })
-  }, [])
-
   return (
     <section className='Home'>
       <Github/>
       {
-        data && <PeriodicTable
-          mainContent={data.elements}
-          distributionContent={data.distribution}
+        elementsData2 && <PeriodicTable
+          mainContent={elementsData2.elements}
+          distributionContent={elementsData2.distribution}
         />
       }
     </section>
