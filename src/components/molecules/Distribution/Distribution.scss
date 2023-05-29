@@ -1,11 +1,8 @@
 .distribution {
   padding: clamp(1.6rem, 5vw, 3rem);
   display: grid;
-  justify-items: center;
-  // border: 1px dashed green;
-
-  p {
-    text-align: center;
-    color: white;
-  }
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.3rem 8rem;
+  margin: 8rem auto 2rem;
+  width: max-content;
 }

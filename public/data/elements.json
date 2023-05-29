@@ -643,5 +643,16 @@
       "url": "",
       "description": ""
     }
+  ],
+  "distribution": [
+    "Root element",
+    "Text-level semantics",
+    "Forms",
+    "Tabular data",
+    "Metadata and scripting",
+    "Grouping content",
+    "Document sections",
+    "Interactive elements",
+    "Embedding content"
   ]
 }

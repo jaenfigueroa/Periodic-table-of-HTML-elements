@@ -1,9 +1,18 @@
+import { Item } from '../../atoms/Item/Item'
 import './Distribution.scss'
 
-export const Distribution = () => {
+type Props = {
+  distributionContent: string[]
+}
+
+export const Distribution = ({distributionContent}:Props) => {
   return (
     <div className='distribution'>
-      <p>Distribution</p>
+      {
+        distributionContent.map(element => (
+          <Item text={element} />
+        ))
+      }
     </div>
   )
 }

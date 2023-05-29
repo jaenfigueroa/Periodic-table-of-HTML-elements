@@ -1,6 +1,7 @@
 export type Data = {
   title: string,
-  elements: ItemHTML[]
+  elements: ItemHTML[],
+  distribution: string[]
 }
 
 export type ItemHTML = {

@@ -19,6 +19,7 @@ export const Home = () => {
       {
         data && <DefaultLayout
           mainContent={data.elements}
+          distributionContent={data.distribution}
         />
       }
     </>

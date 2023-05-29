@@ -6,8 +6,8 @@ type Props = {
 
 export const Title = ({text}:Props) => {
   return (
-    <header className='Title'>
-      <p>{text}</p>
+    <header className='title'>
+      <p className='title__text'>{text}</p>
     </header>
   )
 }
