@@ -15,7 +15,7 @@
 
 ## 💡 Preview
 
-![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685319866/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5173-2023-05-28-19_23_47_1_hazdet.png)
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685329397/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-05-28_220237_wjbioq.png)
 
 ## 🧪 Technologies
 
