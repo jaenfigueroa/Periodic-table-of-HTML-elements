@@ -1,77 +1,39 @@
+@use 'colors' as c;
+
 @mixin variantColors() {
-  /* GRUPO 2 */
-
-  // &--green {
-  //   background: #8affe0;
-  // }
-
-  // &--blue {
-  //   background: #a1afff;
-  // }
-
-  // &--violet {
-  //   background: #ffafff;
-  // }
-
-  // &--yellow {
-  //   background: #ffff92;
-  // }
-
-  // &--orange {
-  //   background: #ffd797;
-  // }
-
-  // &--green2 {
-  //   background: #a9ffad;
-  // }
-
-  // &--blue2 {
-  //   background: #bcc5ff;
-  // }
-
-  // &--orange2 {
-  //   background: #ffaaaa;
-  // }
-
-  // &--gray {
-  //   background: #e5e5e9;
-  // }
-
-  /* GRUPO 3 */
-
   &--green {
-    background: #afffea;
+    background: c.$green;
   }
 
   &--blue {
-    background: #a1afff;
+    background: c.$blue;
   }
 
   &--violet {
-    background: #ffafff;
+    background: c.$violet;
   }
 
   &--yellow {
-    background: #f0feab;
+    background: c.$yellow;
   }
 
   &--orange {
-    background: #ffe5aa;
+    background: c.$orange;
   }
 
   &--green2 {
-    background: #afffb5;
+    background: c.$green2;
   }
 
   &--blue2 {
-    background: #d0c1ff;
+    background: c.$blue2;
   }
 
   &--orange2 {
-    background: #fcacac;
+    background: c.$orange2;
   }
 
   &--gray {
-    background: #e5e5e9;
+    background: c.$gray;
   }
 }
