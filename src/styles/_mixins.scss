@@ -1,38 +1,123 @@
 @mixin variantColors() {
+  // &--green {
+  //   background: linear-gradient(#87ff87, darken(#87ff87, 4));
+  // }
+
+  // &--blue {
+  //   background: linear-gradient(#8391e3, darken(#8391e3, 4));
+  // }
+
+  // &--violet {
+  //   background: linear-gradient(#f88ff8, darken(#f88ff8, 4));
+  // }
+
+  // &--yellow {
+  //   background: linear-gradient(#eaea6b, darken(#eaea6b, 4));
+  // }
+
+  // &--orange {
+  //   background: linear-gradient(#f9995e, darken(#f9995e, 4));
+  // }
+
+  // &--green2 {
+  //   background: linear-gradient(#5ad660, darken(#5ad660, 4));
+  // }
+
+  // &--blue2 {
+  //   background: linear-gradient(#a3b0ff, darken(#a3b0ff, 4));
+  // }
+
+  // &--orange2 {
+  //   background: linear-gradient(#ff6d6d, darken(#ff6d6d, 4));
+  // }
+
+  // &--gray {
+  //   background: linear-gradient(#ceced0, darken(#ceced0, 4));
+  // }
+
+  /* GRUPO 2 */
+
+  // &--green {
+  //   background: #87ff87;
+  //   background: #a1ffa1;
+  // }
+
+  // &--blue {
+  //   background: #8391e3;
+  //   background: #a1afff;
+  // }
+
+  // &--violet {
+  //   background: #f88ff8;
+  //   background: #ffafff;
+  // }
+
+  // &--yellow {
+  //   background: #eaea6b;
+  //   background: #ffff92;
+  // }
+
+  // &--orange {
+  //   background: #f9995e;
+  //   background: #ffbf97;
+  //   background: #ffd797;
+  // }
+
+  // &--green2 {
+  //   background: #5ad660;
+  //   background: #a9ffad;
+  // }
+
+  // &--blue2 {
+  //   background: #a3b0ff;
+  //   background: #bcc5ff;
+  // }
+
+  // &--orange2 {
+  //   background: #ff6d6d;
+  //   background: #ffaaaa;
+  // }
+
+  // &--gray {
+  //   background: #ceced0;
+  //   background: #e5e5e9;
+  // }
+
+  /* GRUPO 3 */
+
   &--green {
-    background: linear-gradient(#87ff87, darken(#87ff87, 4));
+    background: #afffea;
   }
 
   &--blue {
-    background: linear-gradient(#8391e3, darken(#8391e3, 4));
+    background: #a1afff;
   }
 
   &--violet {
-    background: linear-gradient(#f88ff8, darken(#f88ff8, 4));
+    background: #ffafff;
   }
 
   &--yellow {
-    background: linear-gradient(#eaea6b, darken(#eaea6b, 4));
+    background: #f0feab;
   }
 
   &--orange {
-    background: linear-gradient(#f9995e, darken(#f9995e, 4));
+    background: #ffe5aa;
   }
 
   &--green2 {
-    background: linear-gradient(#5ad660, darken(#5ad660, 4));
+    background: #afffb5;
   }
 
   &--blue2 {
-    background: linear-gradient(#a3b0ff, darken(#a3b0ff, 4));
+    background: #d0c1ff;
   }
 
   &--orange2 {
-    // background: linear-gradient(#ff6363, darken(#ff6363, 4));
-    background: linear-gradient(#ff6d6d, darken(#ff6d6d, 4));
+    background: #fcacac;
   }
 
   &--gray {
-    background: linear-gradient(#ceced0, darken(#ceced0, 4));
+    background: #e5e5e9;
   }
 }

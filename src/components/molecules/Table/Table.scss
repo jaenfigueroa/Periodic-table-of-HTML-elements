@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(9, 1fr);
-  gap: .6rem .5rem;
-  // border: 1px dashed red;
+  // border: 1px dashed violet;
+  // gap: .6rem .5rem;
+  // grid-auto-flow: column;
 
   div {
 

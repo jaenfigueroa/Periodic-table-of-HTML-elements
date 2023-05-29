@@ -13,7 +13,7 @@ export const Table = ({ periodicContent }: Props) => {
     <div className='Table'>
       {
         arrayPeriodicContent.map((element, index) => (
-          <Element key={index} text={element.tag} variant={element.group}/>
+          <Element key={index} element={element}/>
         ))
       }
     </div>

@@ -1,8 +1,8 @@
 .distribution {
   padding: clamp(1.6rem, 5vw, 3rem);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1.3rem 8rem;
   margin: 8rem auto 2rem;
-  width: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  max-width: 1100px;
 }

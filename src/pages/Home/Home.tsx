@@ -16,7 +16,7 @@ export const Home = () => {
   }, [])
 
   return (
-    <>
+    <section className='Home'>
       <Github/>
       {
         data && <PeriodicTable
@@ -24,6 +24,6 @@ export const Home = () => {
           distributionContent={data.distribution}
         />
       }
-    </>
+    </section>
   )
 }

@@ -1,11 +1,12 @@
 @use './reset';
 
 .app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  // background: radial-gradient(#484850, #1f202a, #1b1c25);
-  // background: radial-gradient(#484850, #20212c, #1b1c25);
-  // background: radial-gradient(#484850, #252632, #1b1c25);
-  background: radial-gradient(#585861, #252632, #1b1c25);
+  justify-content: space-between;
+
+  &>section {
+    flex-grow: 1;
+  }
 }

@@ -11,7 +11,7 @@ export type ItemHTML = {
   description: string
 }
 
-export type VariantGroup =
+type VariantGroup =
   'Root element' |
   'Metadata and scripting' |
   'Text-level semantics' |
