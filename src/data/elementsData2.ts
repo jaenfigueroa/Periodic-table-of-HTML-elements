@@ -709,6 +709,6 @@ export const elementsData2: Data = {
     'Elems. de tabla' ,
     'Elems. multimedia' ,
     'Elems. de contenido incrustado',
-    'Elems. MathML',
+    'Elems. para MathML',
   ],
 }
