@@ -15,7 +15,7 @@
 
 ## 💡 Preview
 
-![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685332372/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-05-28_225148_1_rjkdpv.png)
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685433354/MI-NUBE/PERIODIC%20TABLE/screencapture-jaenfigueroa-github-io-Periodic-table-of-HTML-elements-new-2023-05-30-02_55_05_1_tzbagb.png)
 
 ## 🧪 Technologies
 
