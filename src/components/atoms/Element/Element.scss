@@ -14,6 +14,7 @@
   p {
     text-align: center;
     font-size: clamp(1rem, 1.1vw, 2rem);
+    line-height: 1.5rem;
   }
 
   span {
@@ -30,8 +31,7 @@
     // font-size: .9rem;
     // font-size: 1rem;
     // line-height: 1rem;
-
-
+    font-size: clamp(.5rem, .6vw, .8rem);
   }
 
   h3 {
