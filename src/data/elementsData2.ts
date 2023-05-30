@@ -488,14 +488,6 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
       'description': '',
     },
-
-    {
-      'tag': 'dialog',
-      'group': 'Elems. de interacción',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dialog',
-      'description': '',
-    },
-    
     {
       'tag': 'details',
       'group': 'Elems. de interacción',
@@ -506,6 +498,12 @@ export const elementsData2: Data = {
       'tag': 'summary',
       'group': 'Elems. de interacción',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
+      'description': '',
+    },
+    {
+      'tag': 'dialog',
+      'group': 'Elems. de interacción',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dialog',
       'description': '',
     },
     /* DEPRECADOS */
