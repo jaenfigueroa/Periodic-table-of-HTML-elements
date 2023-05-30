@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Element = ({ element }: Props) => {
-  const { tag, group, url,id } = element
+  const { tag, group, url } = element
 
   const buttonClasses = classnames('element', {
     'element--green': group === 'Root element',
@@ -39,7 +39,6 @@ export const Element = ({ element }: Props) => {
       </a>
       <p>{tag}</p>
       <span>{group}</span>
-      <h3>{id}</h3>
     </div>
   )
 }
