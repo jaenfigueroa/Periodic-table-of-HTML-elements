@@ -33,39 +33,39 @@
     background: c.$orange2;
   }
 
+  &--gray {
+    background: c.$gray;
+  }
+
   &--green3 {
-    background: #ff92a8;
+    background: c.$green3;
   }
 
   &--skyblue {
-    background: rgb(146, 230, 255);
+    background: c.$skyblue;
   }
 
   &--morado {
-    background: #d0c1ff;
+    background: c.$morado;
   }
 
   &--pink {
-    background: #ffc3f2;
+    background: c.$pink;
   }
 
   &--orange3 {
-    background: #fcd0ac;
+    background: c.$orange3;
   }
 
   &--yellow2 {
-    background: #f0feab;
+    background: c.$yellow2;
   }
 
   &--green4 {
-    background: #abaeff;
-  }
-
-  &--gray {
-    background: rgb(204, 199, 199);
+    background: c.$green4;
   }
 
   &--white {
-    background: white;
+    background: c.$white;
   }
 }

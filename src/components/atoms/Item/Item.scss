@@ -6,13 +6,15 @@
   gap: 1rem;
 
   &__name {
+    font-weight: 350;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #f7f7f7;
   }
 
   &__color {
     width: 20px;
     height: 20px;
-    border-radius: .5rem;
+    // border-radius: .5rem;
 
     @include m.variantColors
   }

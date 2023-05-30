@@ -20,17 +20,10 @@
   span {
     position: absolute;
     font-size: clamp(.5rem, .6vw, .9rem);
-    // font-family: "Segoe UI", sans-serif;
     text-align: center;
     bottom: .5rem;
-    // line-height: .85rem;
     color: transparent;
     padding: 0 .3rem;
-
-    // font-weight: 350;
-    // font-size: .9rem;
-    // font-size: 1rem;
-    // line-height: 1rem;
     font-size: clamp(.5rem, .6vw, .8rem);
   }
 
@@ -40,9 +33,6 @@
     right: .5rem;
     font-weight: 400;
     font-size: 1.2rem;
-    // font-family: "Segoe UI", sans-serif;
-    // color: transparent;
-    // color: blue !important;
   }
 
   &:hover {
@@ -68,6 +58,8 @@
     border-top: 0;
     padding: .4rem .6rem .6rem .4rem;
     border-radius: 0 0 1.1rem 0;
+
+    font-size: .6rem;
 
     &:hover {
       background: white;
