@@ -12,7 +12,7 @@ type Props = {
 export const PeriodicTable = ({ mainContent,distributionContent }:Props) => {
   return (
     <div className='PeriodicTable'>
-      <Title text={'Periodic table of HTML elements'} />
+      <Title text={'Tabla periodica de elementos HTML'} />
       <Table periodicContent={mainContent} />
       <Distribution distributionContent={distributionContent } />
     </div>

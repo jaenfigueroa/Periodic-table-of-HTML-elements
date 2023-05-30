@@ -12,22 +12,22 @@ export type ItemHTML = {
 }
 
 type VariantGroup =
-  'Root element' |
-  'Elementos de estructura' |
+  'Elemento root' |
+  'Elems. de estructura' |
   'Text-level semantics' |
-  'Elementos de lista' |
-  'Elementos de formulario' |
-  'Document sections' |
-  'Elementos de interacción' |
-  'Elementos de tabla' |
-  'Elementos multimedia' |
-  'Contenido incrustado' |
-  'Elementos de texto' |
-  'Elementos de enlace' |
-  'Elementos de enfasis' |
-  'Estilo y presentacion' |
-  'Codigo y variable' |
-  'Elementos de anotaciones' |
-  'Elementos de direccion' |
-  'Elementos de salto de linea'
+  'Elems. de lista' |
+  'Elems. de formulario' |
+  'Elems. para secciones' |
+  'Elems. de interacción' |
+  'Elems. de tabla' |
+  'Elems. multimedia' |
+  'Elems. de contenido incrustado' |
+  'Elems. de texto' |
+  'Elems. de enlace' |
+  'Elems. de enfasis' |
+  'Elems. de estilo y presentacion' |
+  'Elems. de codigo y variable' |
+  'Elems. de anotaciones' |
+  'Elems. de direccion' |
+  'Elems. de salto de linea'
 

@@ -7,15 +7,23 @@ type Props = {
 
 export const Item = ({ text}: Props) => {
   const itemClasses = classnames('item__color', {
-    'item__color--green': text ===  'Root element',
-    'item__color--blue': text ===  'Metadata and scripting',
-    'item__color--violet': text ===  'Embedding content',
-    'item__color--yellow': text ===  'Text-level semantics',
-    'item__color--orange': text ===  'Grouping content',
-    'item__color--green2': text ===  'Forms',
-    'item__color--blue2': text ===  'Document sections',
-    'item__color--orange2': text ===  'Tabular data',
-    'item__color--gray': text ===  'Interactive elements',
+    'item__color--green': text === 'Elemento root',
+    'item__color--blue': text === 'Elems. de estructura',
+    'item__color--violet': text === 'Elems. multimedia',
+    'item__color--orange': text === 'Elems. de lista',
+    'item__color--green2': text === 'Elems. de formulario',
+    'item__color--blue2': text === 'Elems. para secciones',
+    'item__color--orange2': text === 'Elems. de tabla',
+    'item__color--gray': text === 'Elems. de interacción',
+    'item__color--white': text === 'Elems. de contenido incrustado',
+    'item__color--yellow': text === 'Elems. de texto',
+    'item__color--green3': text === 'Elems. de enlace',
+    'item__color--skyblue': text === 'Elems. de enfasis',
+    'item__color--morado': text === 'Elems. de estilo y presentacion',
+    'item__color--orange3': text === 'Elems. de codigo y variable',
+    'item__color--pink': text === 'Elems. de anotaciones',
+    'item__color--yellow2': text === 'Elems. de direccion',
+    'item__color--green4': text === 'Elems. de salto de linea',
   })
 
   return (
