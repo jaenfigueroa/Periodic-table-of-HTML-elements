@@ -126,33 +126,29 @@
     }
 
     /* COLUMNA 16 */
-    @for $i from 76 through 81 {
+    @for $i from 76 through 82 {
       &:nth-child(#{$i}) {
         grid-column: 16;
-        grid-row: $i - 74;
+        grid-row: $i - 75;
       }
     }
 
     /* COLUMNA 17 */
-    @for $i from 82 through 88 {
+    @for $i from 83 through 89 {
       &:nth-child(#{$i}) {
         grid-column: 17;
-        grid-row: $i - 81;
+        grid-row: $i - 82;
       }
     }
 
     /* COLUMNA 18 */
-    @for $i from 89 through 95 {
+    @for $i from 90 through 96 {
       &:nth-child(#{$i}) {
         grid-column: 18;
-        grid-row: $i - 88;
+        grid-row: $i - 89;
       }
     }
 
-    &:nth-child(96) {
-      grid-row: 8;
-      grid-column: 18;
-    }
 
     /* ULTIMO MORADO */
     @for $i from 97 through 108 {
