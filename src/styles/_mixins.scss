@@ -33,7 +33,39 @@
     background: c.$orange2;
   }
 
+  &--green3 {
+    background: #ff92a8;
+  }
+
+  &--skyblue {
+    background: rgb(146, 230, 255);
+  }
+
+  &--morado {
+    background: #d0c1ff;
+  }
+
+  &--pink {
+    background: #ffc3f2;
+  }
+
+  &--orange3 {
+    background: #fcd0ac;
+  }
+
+  &--yellow2 {
+    background: #f0feab;
+  }
+
+  &--green4 {
+    background: #abaeff;
+  }
+
   &--gray {
-    background: c.$gray;
+    background: rgb(204, 199, 199);
+  }
+
+  &--white {
+    background: white;
   }
 }

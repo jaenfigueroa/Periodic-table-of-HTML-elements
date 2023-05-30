@@ -5,95 +5,162 @@
 
   div {
 
-    /* FILA 1 */
-    &:nth-child(1) {
-      grid-row: 1;
-      grid-column: 1;
-    }
-
-    &:nth-child(2) {
-      grid-row: 1;
-      grid-column: 17;
-    }
-
-    &:nth-child(3) {
-      grid-row: 1;
-      grid-column: 18;
-    }
-
-    /* FILA 2 */
-    &:nth-child(4) {
-      grid-row: 2;
-      grid-column: 1;
-    }
-
-    &:nth-child(5) {
-      grid-row: 2;
-      grid-column: 2;
-    }
-
-    @for $i from 6 through 13 {
+    /* COLUMNA 1 */
+    @for $i from 1 through 7 {
       &:nth-child(#{$i}) {
-        grid-row: 2;
-        grid-column: $i + 5;
+        grid-column: 1;
+        grid-row: $i;
       }
     }
 
-    /* FILA 3 */
-    &:nth-child(14) {
-      grid-row: 3;
-      grid-column: 1;
-    }
-
-    &:nth-child(15) {
-      grid-row: 3;
-      grid-column: 2;
-    }
-
-    @for $i from 16 through 23 {
+    /* COLUMNA 2 */
+    @for $i from 8 through 13 {
       &:nth-child(#{$i}) {
-        grid-row: 3;
-        grid-column: $i - 5;
+        grid-column: 2;
+        grid-row: $i - 6;
       }
     }
 
-    /* FILA 4 */
-    @for $i from 24 through 41 {
+    /* COLUMNA 3 */
+    @for $i from 14 through 17 {
       &:nth-child(#{$i}) {
-        grid-row: 4;
-        grid-column: $i - 23;
+        grid-column: 3;
+        grid-row: $i - 10;
       }
     }
 
-    /* FILA 5 */
-    @for $i from 42 through 59 {
+    /* COLUMNA 4 */
+    @for $i from 18 through 21 {
       &:nth-child(#{$i}) {
-        grid-row: 5;
-        grid-column: $i - 41;
+        grid-column: 4;
+        grid-row: $i - 14;
       }
     }
 
-    /* FILA 6 */
-    @for $i from 60 through 77 {
+    /* COLUMNA 5 */
+    @for $i from 22 through 25 {
       &:nth-child(#{$i}) {
-        grid-row: 6;
-        grid-column: $i - 59;
+        grid-column: 5;
+        grid-row: $i - 18;
       }
     }
 
-    /* FILA 7 */
-    @for $i from 78 through 95 {
+    /* COLUMNA 6 */
+    @for $i from 26 through 29 {
       &:nth-child(#{$i}) {
-        grid-row: 7;
-        grid-column: $i - 77;
+        grid-column: 6;
+        grid-row: $i - 22;
       }
     }
 
-    /* FILA 8 */
-    @for $i from 96 through 107 {
+    /* COLUMNA 7 */
+    @for $i from 30 through 33 {
+      &:nth-child(#{$i}) {
+        grid-column: 7;
+        grid-row: $i - 26;
+      }
+    }
+
+    /* COLUMNA 8 */
+    @for $i from 34 through 37 {
+      &:nth-child(#{$i}) {
+        grid-column: 8;
+        grid-row: $i - 30;
+      }
+    }
+
+    /* COLUMNA 9 */
+    @for $i from 38 through 41 {
+      &:nth-child(#{$i}) {
+        grid-column: 9;
+        grid-row: $i - 34;
+      }
+    }
+
+    /* COLUMNA 10 */
+    @for $i from 42 through 45 {
+      &:nth-child(#{$i}) {
+        grid-column: 10;
+        grid-row: $i - 38;
+      }
+    }
+
+    /* COLUMNA 11 */
+    @for $i from 46 through 51 {
+      &:nth-child(#{$i}) {
+        grid-column: 11;
+        grid-row: $i - 44;
+      }
+    }
+
+    /* COLUMNA 12 */
+    @for $i from 52 through 57 {
+      &:nth-child(#{$i}) {
+        grid-column: 12;
+        grid-row: $i - 50;
+      }
+    }
+
+    /* COLUMNA 13 */
+    @for $i from 58 through 63 {
+      &:nth-child(#{$i}) {
+        grid-column: 13;
+        grid-row: $i - 56;
+      }
+    }
+
+    /* COLUMNA 14 */
+    @for $i from 64 through 69 {
+      &:nth-child(#{$i}) {
+        grid-column: 14;
+        grid-row: $i - 62;
+      }
+    }
+
+    /* COLUMNA 15 */
+    @for $i from 70 through 75 {
+      &:nth-child(#{$i}) {
+        grid-column: 15;
+        grid-row: $i - 68;
+      }
+    }
+
+    /* COLUMNA 16 */
+    @for $i from 76 through 81 {
+      &:nth-child(#{$i}) {
+        grid-column: 16;
+        grid-row: $i - 74;
+      }
+    }
+
+    /* COLUMNA 17 */
+    @for $i from 82 through 88 {
+      &:nth-child(#{$i}) {
+        grid-column: 17;
+        grid-row: $i - 81;
+      }
+    }
+
+    /* COLUMNA 18 */
+    @for $i from 89 through 95 {
+      &:nth-child(#{$i}) {
+        grid-column: 18;
+        grid-row: $i - 88;
+      }
+    }
+
+    /* ULTIMO MORADO */
+    @for $i from 96 through 108 {
       &:nth-child(#{$i}) {
         grid-row: 9;
         grid-column: $i - 89;
+      }
+    }
+
+    @for $i from 108 through 112 {
+      &:nth-child(#{$i}) {
+        grid-row: 10;
+        grid-column: $i - 101;
       }
     }
   }
