@@ -89,30 +89,25 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/h1',
       'description': '',
     },
-    {
-      'tag': 'header',
-      'group': 'Elems. de texto',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/header',
-      'description': '',
-    },
-    {
-      'tag': 'footer',
-      'group': 'Elems. de texto',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
-      'description': '',
-    },
+    // {
+    //   'tag': 'header',
+    //   'group': 'Elems. de texto',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/header',
+    //   'description': '',
+    // },
+    // {
+    //   'tag': 'footer',
+    //   'group': 'Elems. de texto',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
+    //   'description': '',
+    // },
     {
       'tag': 'address',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/address',
       'description': '',
     },
-    {
-      'tag': 'main',
-      'group': 'Elems. de texto',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/main',
-      'description': '',
-    },
+
     {
       'tag': 'blockquote',
       'group': 'Elems. de texto',
@@ -199,27 +194,27 @@ export const elementsData2: Data = {
     /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'i',
-      'group': 'Elems. de estilo y presentacion',
+      'group': 'Elems. de estilo',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/i',
       'description': '',
     },
 
     {
       'tag': 'b',
-      'group': 'Elems. de estilo y presentacion',
+      'group': 'Elems. de estilo',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/b',
       'description': '',
     },
     {
       'tag': 'u',
-      'group': 'Elems. de estilo y presentacion',
+      'group': 'Elems. de estilo',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/u',
       'description': '',
     },
 
     {
       'tag': 'mark',
-      'group': 'Elems. de estilo y presentacion',
+      'group': 'Elems. de estilo',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/mark',
       'description': '',
     },
@@ -252,34 +247,33 @@ export const elementsData2: Data = {
       'description': '',
     },
     {
-      'tag': 'sub',
-      'group': 'Elems. de codigo y variable',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sub',
-      'description': '',
-    },
-    {
       'tag': 'sup',
       'group': 'Elems. de codigo y variable',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sup',
       'description': '',
     },
-
+    {
+      'tag': 'sub',
+      'group': 'Elems. de codigo y variable',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sub',
+      'description': '',
+    },
     /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'ruby',
-      'group': 'Elems. de anotaciones',
+      'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ruby',
       'description': '',
     },
     {
       'tag': 'rt',
-      'group': 'Elems. de anotaciones',
+      'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/rt',
       'description': '',
     },
     {
       'tag': 'rp',
-      'group': 'Elems. de anotaciones',
+      'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/rp',
       'description': '',
     },
@@ -290,12 +284,47 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/bdi',
       'description': '',
     },
+    {
+      'tag': 'bdo',
+      'group': 'Elems. de direccion',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/bdo',
+      'description': '',
+    },
     /* XXXXXXXXXXXXXXXXXXXXXXX */
-
+    {
+      'tag': 'br',
+      'group': 'Elems. de salto de linea',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/br',
+      'description': '',
+    },
+    {
+      'tag': 'wbr',
+      'group': 'Elems. de salto de linea',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/wbr',
+      'description': '',
+    },
     {
       'tag': 'form',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/form',
+      'description': '',
+    },
+    {
+      'tag': 'fieldset',
+      'group': 'Elems. de formulario',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset',
+      'description': '',
+    },
+    {
+      'tag': 'legend',
+      'group': 'Elems. de formulario',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/legend',
+      'description': '',
+    },
+    {
+      'tag': 'label',
+      'group': 'Elems. de formulario',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/label',
       'description': '',
     },
     {
@@ -310,27 +339,6 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/button',
       'description': '',
     },
-
-    {
-      'tag': 'br',
-      'group': 'Elems. de salto de linea',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/br',
-      'description': '',
-    },
-    {
-      'tag': 'wbr',
-      'group': 'Elems. de salto de linea',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/wbr',
-      'description': '',
-    },
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
-    {
-      'tag': 'bdo',
-      'group': 'Elems. de direccion',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/bdo',
-      'description': '',
-    },
-
     {
       'tag': 'select',
       'group': 'Elems. de formulario',
@@ -343,12 +351,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist',
       'description': '',
     },
-    {
-      'tag': 'output',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/output',
-      'description': '',
-    },
+
     {
       'tag': 'optgroup',
       'group': 'Elems. de formulario',
@@ -367,24 +370,8 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/textarea',
       'description': '',
     },
-    {
-      'tag': 'label',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/label',
-      'description': '',
-    },
-    {
-      'tag': 'fieldset',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset',
-      'description': '',
-    },
-    {
-      'tag': 'legend',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/legend',
-      'description': '',
-    },
+
+
     {
       'tag': 'output',
       'group': 'Elems. de formulario',
@@ -424,62 +411,32 @@ export const elementsData2: Data = {
 
     {
       'tag': 'dl',
-      'group': 'Elems. de lista',
+      'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dl',
       'description': '',
     },
-    {
-      'tag': 'summary',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
-      'description': '',
-    },
-    {
-      'tag': 'keygen',
-      'group': 'Elems. de formulario',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/keygen',
-      'description': '',
-    },
+    // {
+    //   'tag': 'keygen',
+    //   'group': 'Elems. de formulario',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/keygen',
+    //   'description': '',
+    // },
     {
       'tag': 'dt',
-      'group': 'Elems. de lista',
+      'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dt',
       'description': '',
     },
     {
       'tag': 'dd',
-      'group': 'Elems. de lista',
+      'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dd',
       'description': '',
     },
     {
-      'tag': 'aside',
+      'tag': 'div',
       'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/aside',
-      'description': '',
-    },
-    {
-      'tag': 'addres',
-      'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/addres',
-      'description': '',
-    },
-    {
-      'tag': 'h1 - h6',
-      'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/h1',
-      'description': '',
-    },
-    {
-      'tag': 'hgroup',
-      'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/hgroup',
-      'description': '',
-    },
-    {
-      'tag': 'section',
-      'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/section',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/div',
       'description': '',
     },
     {
@@ -495,6 +452,31 @@ export const elementsData2: Data = {
       'description': '',
     },
     {
+      'tag': 'aside',
+      'group': 'Elems. para secciones',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/aside',
+      'description': '',
+    },
+    /* DEPRECADO */
+    // {
+    //   'tag': 'hgroup',
+    //   'group': 'Elems. para secciones',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/hgroup',
+    //   'description': '',
+    // },
+    {
+      'tag': 'main',
+      'group': 'Elems. para secciones',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/main',
+      'description': '',
+    },
+    {
+      'tag': 'section',
+      'group': 'Elems. para secciones',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/section',
+      'description': '',
+    },
+    {
       'tag': 'article',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/article',
@@ -506,12 +488,39 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
       'description': '',
     },
+
     {
       'tag': 'dialog',
       'group': 'Elems. de interacción',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dialog',
       'description': '',
     },
+    
+    {
+      'tag': 'details',
+      'group': 'Elems. de interacción',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/details',
+      'description': '',
+    },
+    {
+      'tag': 'summary',
+      'group': 'Elems. de interacción',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
+      'description': '',
+    },
+    /* DEPRECADOS */
+    // {
+    //   'tag': 'menu',
+    //   'group': 'Elems. de interacción',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/menu',
+    //   'description': '',
+    // },
+    // {
+    //   'tag': 'menuitem',
+    //   'group': 'Elems. de interacción',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/menuitem',
+    //   'description': '',
+    // },
     {
       'tag': 'table',
       'group': 'Elems. de tabla',
@@ -528,30 +537,6 @@ export const elementsData2: Data = {
       'tag': 'colgroup',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/colgroup',
-      'description': '',
-    },
-    {
-      'tag': 'details',
-      'group': 'Elems. de interacción',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/details',
-      'description': '',
-    },
-    {
-      'tag': 'summary',
-      'group': 'Elems. de interacción',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
-      'description': '',
-    },
-    {
-      'tag': 'menu',
-      'group': 'Elems. de interacción',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/menu',
-      'description': '',
-    },
-    {
-      'tag': 'menuitem',
-      'group': 'Elems. de interacción',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/menuitem',
       'description': '',
     },
     {
@@ -585,24 +570,18 @@ export const elementsData2: Data = {
       'description': '',
     },
     {
-      'tag': 'td',
-      'group': 'Elems. de tabla',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/td',
-      'description': '',
-    },
-    {
       'tag': 'th',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/th',
       'description': '',
     },
-
     {
-      'tag': 'img',
-      'group': 'Elems. multimedia',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/img',
+      'tag': 'td',
+      'group': 'Elems. de tabla',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/td',
       'description': '',
     },
+
     {
       'tag': 'map',
       'group': 'Elems. multimedia',
@@ -616,9 +595,27 @@ export const elementsData2: Data = {
       'description': '',
     },
     {
+      'tag': 'img',
+      'group': 'Elems. multimedia',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/img',
+      'description': '',
+    },
+    {
+      'tag': 'picture',
+      'group': 'Elems. multimedia',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/picture',
+      'description': '',
+    },
+    {
       'tag': 'audio',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/audio',
+      'description': '',
+    },
+    {
+      'tag': 'video',
+      'group': 'Elems. multimedia',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/video',
       'description': '',
     },
     {
@@ -633,31 +630,14 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/track',
       'description': '',
     },
+    /* DEPRECADO */
+    // {
+    //   'tag': 'embed',
+    //   'group': 'Elems. multimedia',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/embed',
+    //   'description': '',
+    // },
 
-    {
-      'tag': 'video',
-      'group': 'Elems. multimedia',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/video',
-      'description': '',
-    },
-    {
-      'tag': 'embed',
-      'group': 'Elems. multimedia',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/embed',
-      'description': '',
-    },
-    {
-      'tag': 'object',
-      'group': 'Elems. multimedia',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/object',
-      'description': '',
-    },
-    {
-      'tag': 'param',
-      'group': 'Elems. multimedia',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/param',
-      'description': '',
-    },
     {
       'tag': 'figure',
       'group': 'Elems. multimedia',
@@ -670,10 +650,18 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/caption',
       'description': '',
     },
+
     {
-      'tag': 'picture',
+      'tag': 'object',
       'group': 'Elems. de contenido incrustado',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/picture',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/object',
+      'description': '',
+    },
+
+    {
+      'tag': 'param',
+      'group': 'Elems. de contenido incrustado',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/param',
       'description': '',
     },
     {
@@ -682,6 +670,8 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe',
       'description': '',
     },
+
+
     {
       'tag': 'canvas',
       'group': 'Elems. de contenido incrustado',
@@ -689,15 +679,15 @@ export const elementsData2: Data = {
       'description': '',
     },
     {
-      'tag': 'math',
-      'group': 'Elems. de contenido incrustado',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/math',
-      'description': '',
-    },
-    {
       'tag': 'svg',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/svg',
+      'description': '',
+    },
+    {
+      'tag': 'math',
+      'group': 'Elems. para MathML',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/math',
       'description': '',
     },
   ],
@@ -707,9 +697,9 @@ export const elementsData2: Data = {
     'Elems. de texto',
     'Elems. de enlace' ,
     'Elems. de enfasis' ,
-    'Elems. de estilo y presentacion' ,
+    'Elems. de estilo' ,
     'Elems. de codigo y variable' ,
-    'Elems. de anotaciones' ,
+    'Elems. para anotaciones ruby' ,
     'Elems. de direccion' ,
     'Elems. de salto de linea',
     'Elems. de formulario' ,
@@ -718,6 +708,7 @@ export const elementsData2: Data = {
     'Elems. de interacción' ,
     'Elems. de tabla' ,
     'Elems. multimedia' ,
-    'Elems. de contenido incrustado' ,
+    'Elems. de contenido incrustado',
+    'Elems. MathML',
   ],
 }

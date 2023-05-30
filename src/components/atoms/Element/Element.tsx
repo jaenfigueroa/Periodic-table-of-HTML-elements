@@ -14,6 +14,7 @@ export const Element = ({ element }: Props) => {
     'element--blue': group === 'Elems. de estructura',
     'element--violet': group === 'Elems. multimedia',
     'element--orange': group === 'Elems. de lista',
+    'element--orange4': group === 'Elems. de lista de definiciones',
     'element--green2': group === 'Elems. de formulario',
     'element--blue2': group === 'Elems. para secciones',
     'element--orange2': group === 'Elems. de tabla',
@@ -22,11 +23,12 @@ export const Element = ({ element }: Props) => {
     'element--yellow': group === 'Elems. de texto',
     'element--green3': group === 'Elems. de enlace',
     'element--skyblue': group === 'Elems. de enfasis',
-    'element--morado': group === 'Elems. de estilo y presentacion',
+    'element--morado': group === 'Elems. de estilo',
     'element--orange3': group === 'Elems. de codigo y variable',
-    'element--pink': group === 'Elems. de anotaciones',
+    'element--pink': group === 'Elems. para anotaciones ruby',
     'element--yellow2': group === 'Elems. de direccion',
     'element--green4': group === 'Elems. de salto de linea',
+    'element--blue3': group === 'Elems. para MathML',
   })
 
   return (

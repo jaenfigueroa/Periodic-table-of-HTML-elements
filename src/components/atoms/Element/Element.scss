@@ -14,7 +14,10 @@
   p {
     text-align: center;
     font-size: clamp(1rem, 1.1vw, 2rem);
-    line-height: 1.5rem;
+    // font-size: clamp(1rem, 1.15vw, 2rem);
+    line-height: 1.7rem;
+
+    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   span {
@@ -58,7 +61,6 @@
     border-top: 0;
     padding: .4rem .6rem .6rem .4rem;
     border-radius: 0 0 1.1rem 0;
-
     font-size: .6rem;
 
     &:hover {

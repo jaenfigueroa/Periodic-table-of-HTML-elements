@@ -149,11 +149,16 @@
       }
     }
 
+    &:nth-child(96) {
+      grid-row: 8;
+      grid-column: 18;
+    }
+
     /* ULTIMO MORADO */
-    @for $i from 96 through 108 {
+    @for $i from 97 through 108 {
       &:nth-child(#{$i}) {
         grid-row: 9;
-        grid-column: $i - 89;
+        grid-column: $i - 87;
       }
     }
 

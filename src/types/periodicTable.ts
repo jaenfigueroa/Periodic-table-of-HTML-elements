@@ -16,6 +16,7 @@ type VariantGroup =
   'Elems. de estructura' |
   'Text-level semantics' |
   'Elems. de lista' |
+  'Elems. de lista de definiciones' |
   'Elems. de formulario' |
   'Elems. para secciones' |
   'Elems. de interacción' |
@@ -25,9 +26,10 @@ type VariantGroup =
   'Elems. de texto' |
   'Elems. de enlace' |
   'Elems. de enfasis' |
-  'Elems. de estilo y presentacion' |
+  'Elems. de estilo' |
   'Elems. de codigo y variable' |
-  'Elems. de anotaciones' |
+  'Elems. para anotaciones ruby' |
   'Elems. de direccion' |
-  'Elems. de salto de linea'
+  'Elems. de salto de linea' |
+  'Elems. para MathML'
 
