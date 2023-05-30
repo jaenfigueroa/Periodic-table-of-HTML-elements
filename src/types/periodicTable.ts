@@ -5,7 +5,6 @@ export type Data = {
 }
 
 export type ItemHTML = {
-  id: number
   tag: string,
   group: VariantGroup,
   url: string,
@@ -14,12 +13,21 @@ export type ItemHTML = {
 
 type VariantGroup =
   'Root element' |
-  'Metadata and scripting' |
+  'Elementos de estructura' |
   'Text-level semantics' |
-  'Grouping content' |
-  'Forms' |
+  'Elementos de lista' |
+  'Elementos de formulario' |
   'Document sections' |
-  'Interactive elements' |
-  'Tabular data' |
-  'Embedding content'
+  'Elementos de interacción' |
+  'Elementos de tabla' |
+  'Elementos multimedia' |
+  'Contenido incrustado' |
+  'Elementos de texto' |
+  'Elementos de enlace' |
+  'Elementos de enfasis' |
+  'Estilo y presentacion' |
+  'Codigo y variable' |
+  'Elementos de anotaciones' |
+  'Elementos de direccion' |
+  'Elementos de salto de linea'
 
