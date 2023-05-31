@@ -17,6 +17,8 @@
 
 ![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685467979/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5174-2023-05-30-12_31_28_1_dwscsu.png)
 
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685576524/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-05-31_184100_1_pvgu9l.png)
+
 ## 🧪 Technologies
 
 <img src="https://skillicons.dev/icons?i=vite,react,typescript,sass,javascript,html"/>
