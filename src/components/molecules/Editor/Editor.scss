@@ -4,11 +4,17 @@
   gap: 1rem;
   flex-direction: row;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 60% 39%;
+  min-height: 470px;
 
   &__container-editors {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container-titles {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   &__names {
@@ -16,10 +22,16 @@
     border-bottom: none;
     padding: .6rem 1rem;
     background: #f5f5f5;
+    font-weight: bold;
+
+    &:hover {
+      background: #ededed;
+    }
   }
 
   &__editor-code {
-    border: 1px solid rgba(0, 0, 0, 0.25)
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    flex-grow: 1;
   }
 
   &__container-iframe {

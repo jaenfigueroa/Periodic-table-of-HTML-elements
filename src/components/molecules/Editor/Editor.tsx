@@ -15,6 +15,8 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
   const [htmlCode, setHtmlCode] = useState<string>(htmlDefault)
   const [cssCode, setCssCode] = useState<string>(cssDefault)
 
+  const [htmlCodeVisible, setHTMLVIsible] = useState<boolean>(true)
+
   /* ACTUALIZAR EL IFRAME */
   useEffect(() => {
     const iframeDocument = iframeRef.current?.contentDocument
@@ -43,26 +45,31 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
   return (
     <div className='editor'>
       <div className='editor__container-editors'>
-        <div>
-          <h2 className='editor__names'>HTML</h2>
-          <CodeMirror
-            className='editor__editor-code'
-            value={htmlCode}
-            height='200px'
-            extensions={[html()]}
-            onChange={(value) => setHtmlCode(value)}
-          />
+        <div className='editor__container-titles'>
+          <button onClick={() =>setHTMLVIsible(true)} className='editor__names'>HTML</button>
+          <button onClick={() =>setHTMLVIsible(false)} className='editor__names'>CSS</button>
         </div>
-        <div>
-          <h2 className='editor__names'>CSS</h2>
-          <CodeMirror
-            className='editor__editor-code'
-            value={cssCode}
-            height='200px'
-            extensions={[css()]}
-            onChange={(value) => setCssCode(value)}
-          />
-        </div>
+        {
+          htmlCodeVisible
+            ? (
+              <CodeMirror
+                className='editor__editor-code'
+                value={htmlCode}
+                height='100%'
+                extensions={[html()]}
+                onChange={(value) => setHtmlCode(value)}
+              />
+            )
+            : (
+              <CodeMirror
+                className='editor__editor-code'
+                value={cssCode}
+                height='100%'
+                extensions={[css()]}
+                onChange={(value) => setCssCode(value)}
+              />
+            )
+        }
       </div>
       <div className='editor__container-iframe'>
         <h2 className='editor__names'>Resultado</h2>
