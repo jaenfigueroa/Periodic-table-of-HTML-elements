@@ -1,6 +1,8 @@
+import { AppContext } from '../../../context/AppContext'
 import { ItemHTML } from '../../../types/periodicTable'
 import './Element.scss'
 import classnames from 'classnames'
+import {useContext} from 'react'
 
 interface Props {
   element: ItemHTML
@@ -8,6 +10,7 @@ interface Props {
 
 export const Element = ({ element }: Props) => {
   const { tag, group, url } = element
+  const {alternateModal} = useContext(AppContext)
 
   const buttonClasses = classnames('element', {
     'element--green': group === 'Elemento root',
@@ -32,7 +35,7 @@ export const Element = ({ element }: Props) => {
   })
 
   return (
-    <div className={buttonClasses}>
+    <div className={buttonClasses} onClick={alternateModal}>
       <a href={url} target='_blank'>
         <i className='fa-solid fa-magnifying-glass'></i>
       </a>

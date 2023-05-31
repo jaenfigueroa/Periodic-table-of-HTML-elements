@@ -6,9 +6,7 @@ type Props = {
 }
 
 export const Modal = ({children}:Props) => {
-  const [isActive] = useState<boolean>(false)
-
-  // const handleActive = () => setIsActive(!isActive)
+  const [isActive] = useState<boolean>(true)
 
   return (
     <>
