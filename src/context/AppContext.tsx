@@ -6,21 +6,30 @@ type Props = {
 
 interface AppContext {
   modalActive: boolean,
-  alternateModal: ()=> void
+  alternateModal: (value:boolean) => void,
+  modalContent: JSX.Element | null,
+  updateModal: (element: JSX.Element) => void
 }
 
 export const AppContext = createContext<AppContext>({} as AppContext)
 
 export const AppProvider = ({ children }: Props) => {
   const [modalActive, setModalActive] = useState<boolean>(false)
+  const [modalContent, setModalContent] = useState<JSX.Element | null>(null)
 
-  const alternateModal = () => {
-    setModalActive(!modalActive)
+  const alternateModal = (value:boolean) => {
+    setModalActive(value)
+  }
+
+  const updateModal = (element:JSX.Element) => {
+    setModalContent(element)
   }
 
   const sharedData:AppContext = {
     modalActive,
     alternateModal,
+    modalContent,
+    updateModal,
   }
 
   return (

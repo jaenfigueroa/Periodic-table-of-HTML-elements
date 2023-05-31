@@ -10,9 +10,13 @@
 
   &__button-close {
     position: absolute;
-    right: 10px;
     top: 10px;
+    // left: 10px;
+    right: 10px;
     border: none;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
 
     i {
       font-size: 3rem;

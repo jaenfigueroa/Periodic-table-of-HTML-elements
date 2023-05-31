@@ -2,32 +2,27 @@ import './Info.scss'
 import {useContext} from 'react'
 import { Editor } from '../Editor/Editor'
 import { AppContext } from '../../../context/AppContext'
+import { ItemHTML } from '../../../types/periodicTable'
 
 type Props = {
-  title: string
-  description: string
+  element: ItemHTML
 }
 
-export const Info = ({ title, description }: Props) => {
+export const Info = ({ element }: Props) => {
   const {alternateModal} = useContext(AppContext)
 
   return (
     <div className='info'>
       <header>
-        <button className='info__button-close' onClick={alternateModal}>
-          <i className='fa-solid fa-circle-xmark'></i>
+        <button className='info__button-close' >
+          <i className='fa-solid fa-circle-xmark'onClick={() => alternateModal(false)}></i>
         </button>
-        <h2 className='info__title'>{title}</h2>
-        <p className='info__description'>{ description}</p>
+        <h2 className='info__title'>{element.tag}</h2>
+        <p className='info__description'>{ element.description}</p>
       </header>
       <Editor
-        htmlDefault='<h1>jaen</h1>
-<h2>jaen</h2>
-<h3>jaen</h3>
-<h4>jaen</h4>
-<h5>jaen</h5>
-<h6>jaen</h6>'
-        cssDefault='h1{color:blue}'
+        htmlDefault={element.codeHTML}
+        cssDefault={element.codeCSS}
       />
     </div>
   )

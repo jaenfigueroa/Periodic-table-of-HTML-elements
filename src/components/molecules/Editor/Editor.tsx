@@ -28,13 +28,8 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
           <style>
           * {
             box-sizing: border-box;
-            // margin: 0;
-            // padding: 0;
             text-rendering: optimizeLegibility;
             font-family: sans-serif;
-          }
-          html{
-            margin: .5rem ;
           }
           ${cssCode}</style>
         </head>

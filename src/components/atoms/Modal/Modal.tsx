@@ -1,20 +1,18 @@
 import './Modal.scss'
-import {useState} from 'react'
+import { AppContext } from '../../../context/AppContext'
+import { useContext} from 'react'
 
-type Props = {
-  children:JSX.Element
-}
-
-export const Modal = ({children}:Props) => {
-  const [isActive] = useState<boolean>(true)
+export const Modal = () => {
+  const {modalActive, modalContent} = useContext(AppContext)
 
   return (
     <>
       {
-        isActive && (
+        modalActive && (
           <div className='modal'>
-            {children}
+            {modalContent}
           </div>
+
         )
       }
     </>
