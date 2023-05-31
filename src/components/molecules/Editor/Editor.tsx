@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react'
 import CodeMirror from '@uiw/react-codemirror'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
-// import { javascript } from '@codemirror/lang-javascript'
 
 type Props = {
   htmlDefault: string
@@ -11,17 +10,16 @@ type Props = {
 }
 
 export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
-  const iframeRef = useRef(null)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
 
-  const [htmlCode, setHtmlCode] = useState(htmlDefault)
-  const [cssCode, setCssCode] = useState(cssDefault)
-  // const [jsCode, setJsCode] = useState('console.log(\'hello world!\');')
+  const [htmlCode, setHtmlCode] = useState<string>(htmlDefault)
+  const [cssCode, setCssCode] = useState<string>(cssDefault)
 
   /* ACTUALIZAR EL IFRAME */
   useEffect(() => {
-    const iframeDocument = iframeRef.current.contentDocument
-    iframeDocument.open()
-    iframeDocument.write(
+    const iframeDocument = iframeRef.current?.contentDocument
+    iframeDocument?.open()
+    iframeDocument?.write(
       `
       <html>
         <head>
@@ -39,7 +37,7 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
       </html>
       `,
     )
-    iframeDocument.close()
+    iframeDocument?.close()
   }, [htmlCode, cssCode])
 
   return (
