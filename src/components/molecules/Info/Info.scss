@@ -47,7 +47,22 @@
 
   @media (min-widtH: 720px) {
     border-radius: .5rem;
-    width: clamp(200px, 90%, 900px);
-    max-height: 650px;
+    width: clamp(200px, 90%, 1100px);
+    max-height: 680px;
+  }
+}
+
+.aver {
+  // border: 1px solid red;
+  padding: 2rem;
+  border-radius: .5rem;
+  background: rgb(169, 255, 173, .3);
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+
+  * {
+    font-size: 1.8rem;
   }
 }
