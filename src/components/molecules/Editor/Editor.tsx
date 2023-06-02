@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 import CodeMirror from '@uiw/react-codemirror'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
+import { themeHTML } from '../../../themes/themeHTML'
+import { themeCSS } from '../../../themes/themeCSS'
 
 type Props = {
   htmlDefault: string
@@ -57,6 +59,7 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
                 value={htmlCode}
                 height='100%'
                 extensions={[html()]}
+                theme={themeHTML}
                 onChange={(value) => setHtmlCode(value)}
               />
             )
@@ -66,6 +69,7 @@ export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
                 value={cssCode}
                 height='100%'
                 extensions={[css()]}
+                theme={themeCSS}
                 onChange={(value) => setCssCode(value)}
               />
             )

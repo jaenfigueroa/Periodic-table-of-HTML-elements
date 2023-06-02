@@ -681,8 +681,18 @@ export const elementsData2: Data = {
       'tag': 'datalist',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist',
-      'description': '',
-      'codeHTML': '',
+      'description': 'El elemento "**<datalist>**" de HTML se utiliza junto con el elemento "**<input>**" para proporcionar una lista desplegable de opciones para que los usuarios elijan.',
+      'codeHTML': `<label for="fruta">Selecciona una fruta:</label>
+<input list="frutas" id="fruta" name="fruta">
+
+<datalist id="frutas">
+  <option value="Manzana">
+  <option value="Plátano">
+  <option value="Naranja">
+  <option value="Mango">
+  <option value="Uva">
+</datalist>
+`,
       'codeCSS': '',
     },
 

@@ -13,10 +13,13 @@
     "@codemirror/lang-css": "^6.2.0",
     "@codemirror/lang-html": "^6.4.3",
     "@codemirror/lang-javascript": "^6.1.8",
+    "@lezer/highlight": "^1.1.6",
+    "@uiw/codemirror-themes": "^4.20.2",
     "@uiw/react-codemirror": "^4.20.2",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
