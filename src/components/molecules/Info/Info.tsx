@@ -19,9 +19,13 @@ export const Info = ({ element }: Props) => {
           <i className='fa-solid fa-circle-xmark'onClick={() => alternateModal(false)}></i>
         </button>
         <h2 className='info__title'>&lt;{element.tag}&gt;</h2>
-        <div className='aver'>
-          <ReactMarkdown>{element.description}</ReactMarkdown>
-        </div>
+        {
+          element.description && (
+            <div className='aver'>
+              <ReactMarkdown>{element.description}</ReactMarkdown>
+            </div>
+          )
+        }
       </header>
       <Editor
         htmlDefault={element.codeHTML}
