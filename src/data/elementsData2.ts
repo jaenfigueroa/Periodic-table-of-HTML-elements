@@ -10,13 +10,16 @@ export const elementsData2: Data = {
       'description': 'Es el elemento raíz de todo el documento HTML y se utiliza para envolver y estructurar todo el contenido HTML.',
       'codeHTML': `<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Título de la página</title>
 </head>
+
 <body>
-    <!-- Aquí va el contenido de la página -->
+    <p>Hola mundo</p>
 </body>
+
 </html>
 `,
       'codeCSS': '',
@@ -25,18 +28,21 @@ export const elementsData2: Data = {
       'tag': 'head',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/head',
-      'description': 'Se utiliza para incluir metadatos y otros elementos que no forman parte del contenido visible en la página web, pero que son importantes para el funcionamiento y presentación del documento.',
+      'description': 'Se utiliza para incluir metadatos y otros elementos que **no forman parte del contenido visible en la página web**, pero que son importantes para el funcionamiento y presentación del documento.',
       'codeHTML': `<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Título de la página</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    <!-- Contenido visible de la página -->
+    <p>Hola mundo</p>
 </body>
+
 </html>
 `,
       'codeCSS': '',
@@ -45,15 +51,16 @@ export const elementsData2: Data = {
       'tag': 'title',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/title',
-      'description': 'Se utiliza para definir el título de un documento HTML. El título se muestra en la barra de título del navegador o en la pestaña del navegador cuando se abre la página web.',
+      'description': 'Se utiliza para **definir el título** de un documento HTML. El título se muestra en la barra de título del navegador o en la pestaña del navegador cuando se abre la página web.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <!-- aqui se define el titulo del dicumento HTML -->
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
+    <p>Hola mundo</p>
 </body>
 </html>
 `,
@@ -63,15 +70,16 @@ export const elementsData2: Data = {
       'tag': 'base',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/base',
-      'description': 'Se utiliza para especificar la URL base para todas las URL relativas en un documento HTML. Establecer el elemento <base> permite evitar la repetición de la URL base en todas las URL relativas dentro del documento.',
+      'description': 'Se utiliza para **especificar la URL base para todas las URL relativas** en un documento HTML. Establecer el elemento <base> permite evitar la repetición de la URL base en todas las URL relativas dentro del documento.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
+    <!-- aqui se define que https://www.ejemplo.com sera la url base -->
     <base href="https://www.ejemplo.com/">
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
+    <!-- ahora esta url sera igual a https://www.ejemplo.com/pagina.html -->
     <a href="pagina.html">Enlace a otra página</a>
 </body>
 </html>
@@ -82,19 +90,22 @@ export const elementsData2: Data = {
       'tag': 'link',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/link',
-      'description': 'El elemento <link> en HTML se utiliza para enlazar recursos externos con el documento HTML. Se utiliza principalmente para enlazar hojas de estilo CSS, pero también se puede usar para enlazar otros tipos de recursos, como fuentes, iconos, archivos de JavaScript, archivos de imagen y más.',
+      'description': 'Se utiliza para **enlazar recursos externos**. Utilizado principalmente para enlazar hojas de estilo CSS, pero también otros tipos de recursos, como fuentes, iconos, archivos de JavaScript, archivos de imagen y más.',
       'codeHTML': `<!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <title>Título de la página</title>
+    <!-- usando la etiqueta link para enlazar recursos externos -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
+    <p>Hola mundo</p>
 </body>
+
 </html>
 `,
       'codeCSS': '',
@@ -103,19 +114,23 @@ export const elementsData2: Data = {
       'tag': 'meta',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/meta',
-      'description': 'El elemento <meta> en HTML se utiliza para agregar metadatos al documento HTML. Los metadatos son información adicional que no se muestra directamente en la página, pero que proporciona detalles sobre el documento, como la descripción, palabras clave, autor, codificación de caracteres y más.',
+      'description': 'Se utiliza para agregar **metadatos** al documento HTML. Los metadatos son **información adicional** que no se muestra directamente en la página, pero que proporciona detalles sobre el documento, como la **descripción, palabras clave, autor, codificación de caracteres y más**.',
       'codeHTML': `<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Descripción del sitio web">
-    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3">
     <meta name="author" content="Nombre del autor">
+    <meta name="description" content="Descripción del sitio web">
+    <meta name="keywords" content="palabra clave 1, palabra clave 2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
+    <p>Hola mundo</p>
 </body>
+
 </html>
 `,
       'codeCSS': '',
@@ -124,27 +139,22 @@ export const elementsData2: Data = {
       'tag': 'style',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/style',
-      'description': 'El elemento <style> en HTML se utiliza para incluir reglas de estilo CSS directamente dentro del documento HTML. Esto te permite aplicar estilos específicos a elementos individuales o grupos de elementos sin la necesidad de enlazar una hoja de estilo externa.',
+      'description': 'Se utiliza para **incluir reglas de estilo CSS directamente dentro del documento HTML**. Esto te permite aplicar estilos específicos a elementos individuales o grupos de elementos sin la necesidad de enlazar una hoja de estilo externa.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <title>Título de la página</title>
+    <!-- Reglas de estilo CSS -->
     <style>
-        /* Reglas de estilo CSS */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        
         h1 {
-            color: #333;
+            background-color: yellow;
         }
-        
-        /* Más reglas de estilo */
+        p {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
     <h1>Título de la sección</h1>
     <p>Este es un párrafo de ejemplo.</p>
 </body>
@@ -156,17 +166,18 @@ export const elementsData2: Data = {
       'tag': 'noscript',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/noscript',
-      'description': 'El elemento <noscript> en HTML se utiliza para proporcionar contenido alternativo que se mostrará si el navegador del usuario no admite JavaScript o si JavaScript está deshabilitado en el navegador.',
+      'description': 'Se utiliza para **proporcionar contenido alternativo que se mostrará si el navegador del usuario no admite JavaScript** o si JavaScript está deshabilitado en el navegador.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
-    
+    <p>Hola mundo</p>
     <noscript>
-        <p>El JavaScript está deshabilitado en tu navegador. Para ver este sitio web correctamente, habilita JavaScript en la configuración de tu navegador.</p>
+        <p>El JavaScript está deshabilitado en tu navegador.
+          Para ver este sitio web correctamente, habilita JavaScript
+          en la configuración de tu navegador.</p>
     </noscript>
 </body>
 </html>
@@ -177,17 +188,16 @@ export const elementsData2: Data = {
       'tag': 'script',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/script',
-      'description': 'El elemento <script> en HTML se utiliza para insertar o enlazar código JavaScript en un documento HTML. Puedes utilizarlo para ejecutar scripts directamente en el documento o para enlazar archivos de JavaScript externos.',
+      'description': 'Se utiliza para **insertar o enlazar código JavaScript** en un documento HTML. Puedes utilizarlo para ejecutar scripts directamente en el documento o para enlazar archivos de JavaScript externos.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
-    
+    <p>Hola mundo</p>
+    <!--  Código JavaScript en línea -->
     <script>
-        // Código JavaScript en línea
         console.log("Hola, mundo!");
     </script>
 </body>
@@ -199,7 +209,7 @@ export const elementsData2: Data = {
       'tag': 'body',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/body',
-      'description': 'El elemento <body> en HTML se utiliza para envolver el contenido visible de una página web. Todo el contenido que deseas que los usuarios vean y experimenten en el navegador se coloca dentro del elemento <body>.',
+      'description': 'Se utiliza para **envolver el contenido visible** de una página web. Todo el contenido que deseas que los usuarios vean y experimenten en el navegador se coloca dentro del elemento **<body>**.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
@@ -209,7 +219,7 @@ export const elementsData2: Data = {
     <!-- Contenido visible de la página -->
     <h1>Título de la página</h1>
     <p>Este es un párrafo de ejemplo.</p>
-    <img src="imagen.jpg" alt="Descripción de la imagen">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUQERIWFRUVFRUXFRUVFRUVEhcVFRUXFhUWFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0hICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPYAzAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgMBBAUGB//EADkQAAIBAwEECQIDBgcAAAAAAAABAgMRIQQFEjFBBhNRYXGBkbHwocEiMtEUQlJy4fEHFRYjNEOS/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACkRAAICAgIBAwMEAwAAAAAAAAABAhEDBBIhMRNBURQikUJSYYEFFTL/2gAMAwEAAhEDEQA/APuIAABjeV7czEpEYAFgAAAAAAAAAItmM9twCYMJmQAAAAAAAAYbAEpJZZkqky0AAAAAAAEZMyyuKACVyxIJGQAAAAAAAGDDYBGPAX7DDlbgRdQg5xR2mWRM3NOpqCpaszy24p0TWJnSBpQ1RdCumTjswkccGi8EYyJF6afggCpsTefYnGPqdAhEkAAAAAAAAAAAAAAAAAAAwCMpWNapWMamqc+pVPN2NmnRox4r7NvrSuVVmnKsQdbkZvWss4G1OpdGnOXkQnW8vY1pVc/LlGSVk4qjdhXZbHVHJlU7/qZp1efuRTYaO/R1Z0KNW55SGotx+h1dHqzVh2HCXZXPHa6O4CFKd0TPZjJSVoyNUAAdAAAAAAAAAAAAAAAAKq87IsbOfqapRsZOESeONs19RVNKoydaZrSieHJuTN6VIm5rkV9b69jINcslFTHhf0O30coV6tuZoVNckm352ybVSF07czlvQTu1lJrg1i5GFOXZKlRsLVxtvX/Dyt84ng/8RtsamDg6bcaVsKNrSbtu3fZ+b0Pe6LR7qzlMlrNl0qsd2UU1K+LY7/A04ssITtoqmm1SPmnQnpJWdZQnJuEr4dsNWyrfOB9V0OqcUr+BxNF0b09CX4KaTebu7duxPFjpRg+fBPj3fqSzzhkdxJYotKmeq02v3Uud+R2KdRSV1wPBVtW9y0PzJ4vezXNXXudjYm05q3WR3U+KbTafarFurncXxl4O5tW48o+T04MRkmrrgZPUPOAAAAAAAAAAMXMgAAAFdd4OTqJnT1MsHG1GDzN6RqwIpkilvvMVJFM7s8r1a9jZwslVqx4exCU+w17u91wXzBdGfJLPt4sksvI48dGUvD7icf4vL9SmVTN7YX1MKo232Ph65f8AQj6kfc7wZZThHNvbmi6nQtlcPBexVSSfDlx8i+ErN8+73C7INEqum3lx+nA1KumsrybwnnH1RvRqvhY2KWncuJfD+BF8fJ57T0KreE35L9DsUNDWvmD9LHodHpVFcMm3c9LFq2rkQybr8RRp7OpyjG0l4G4AbYx4qjDKXJ2AASIgAAAjJ8iRHn4gGLdxlYwGEgCRGpKxI19RIhklUTsVbKK07nN1Bu1JmpVjc8vKuZrh0c2pa5iTxZeZZUVnn2KqkV2Nr5wMiwGjmU1JWWE7Lyu/PkUurZOT+X7L8+42uoUotp38XfkadSFluNKK8Ofa+Y+np2dWSzX61z8O/t7Syi3wVnbvV+d7mzo5QjJx4Wjdp/Vps340I2UuTXvkreq33ZP1kuqNeleyx2cOXebcaV/nMhRoZxe6XPsZv06ZdhxfJTORVToHT08LFEYk1OxpVY2Uu5I3YzLLeZpKqbVOZswZV4M840TtbKJohYmaysAAAAAAGGjIAIqJIAAGpXZtS4HPrPJnzypFmNFdRmpOZbVkak5Hnzn8GmMTNWXd6lFaOLq3uixL+xJUlzYTkzvSNKinvXeE/DPabL06bvZY+Z7ybSXL5yJzWLIkl8nGzl6vSJ3ssmxo007PkrPy4fT3NlUyNNZujlUS5WqJ7n4rpmzSXaVqPDu+5dFjwRskYmY3ixLBmcuTJeCFORtU5GuoF9NE8PJMhkpm/B4JFVEtPag7j2ZH5AAJnAAAAAAAAACNR4OVVnk6OrlaJyJzyefty+5RNGFdWRqN/GU3v8sic3cRRQo2y26MJW+YFvX2M1JckZhHGS1R9iLZVLGeZFVt12aeS1xzdlMou9yL6Op2XSZFJXIxkY3imeRIlGJe5FkGayLqaxYpeZyfRPjRa0STC4GEcr3OFsDaowNWJuaZmvXX3JMpyPo2IoyAesZQAAAAAAAAAAADX1qwcmUDs144OdVjkwbGK52X4pUjTlxsTbSwjM4kHEhFNE27IkjILKIkWR3TNzJFo6indKs/PqbDRjdyefnV9F8HRiJs0iiMcmzCJVhRKbLWsEUTbK5M0ySK0WJmxRmaCmX03kjHLT6EodHVizJVQeC09uEuUUzE1TAAJnAAAAAYbADZCLu7mG7k4xAMyRzK6szqGtrKG8rriUZoNq15RPG6dM500VsKpyYZnjNSVoucWjBgNmCVnCLEicY3dhONvmTkvARU0TsIxJpGOWO7LUzEYmxTRXFFidiWPGl2G7FWVsmnOdy3Uz5FDMmxPukW449FsDZoo1om/pYXO6+NzlRHLKkbUOFjYKoQLT6CKpUYG7YABI4AAAGypv8AoWkYxsAIRJAAAAAHL1+hbe9H0OZ17TtI9Oed6WwUKfWpZvZ+hgz67jc4OvlGvBPm1CRhVVa9ySZ5HZ+1ZTlupO7eD1tTQTjFN5xnuKYTlK3XguzYPTaTfklvIw6qXi+fYa+RY68llSgXxqInGojVSJJEVJneJsdait1zEaLfBG/R2ZdfiOcMmR1E7cI+TnOVzKjc1dp13p5uMlxzF9qZ19gSU4uVuf2M0NWU8nF9F83whz9iOn0snx4d51KNKy7ixwJHsYNeOJdHnZMjm+wADQVgAAAAAAAAAAAAAAA4HTN/7Fu2X2Z3zynTfUYjBfL/ANijZlxxs0asW8qo5/QXZic3VaxHh/M+B7uxwuhsLaddu87ndGtBRxo7t5HPK79ujWqaKDzYr/y6Jugm8UH7FCnJe5qvQQ7B+wxNoHfSh8DnL5K4UkuCLACSSXgjZwOmWk36G/zg7+T4/Yh0Nq3pteD+x0Okf/Gqfy/dHmuher3ZuD54MWVqGxF/J6GJOerJfDPbgA3HngAAAAAAAAAAAAEZSS4uxTLVwXGcfVHG0vJ1Rb8GwYuc+vtilH9677Fk5Ws6URSe5Hh2v7FM9nFDyy/HqZZ+Ine12sjSi5S8u88BtPU9bPfb4so1W2p15KLvl2XYWbSpqCb4JLJ5uxneXx4PWwafodS/6Z63orWXVOOLqT+qTO3vHyzZW1F+FKTw8P8AU91ptsQlZb1n34NWvspri+jHuacoS5Luzsb43zRVbsHWGvkYeBvb43zS6wz1o5Dibu8JTSV27I59fWRgrydkcvX7ZhKLgnx8ivJnjBdvssx605vpdEeke2YTpypU3e/5nyssnmdj1M3RRtnVKEbQX3ZqdGNepPdtaSzZnj5cssjUpH0GLVWPE+J9N2RtFTW7J/iX1OmeA2hCorTp8HnvTNvRdI6kUlPPibsW6o/bP8nmZf8AHuX34/we0BwaHSWD/MvRl66RUu/0RqW1hf6jE9TMv0s64KdNqFNKSTs+F1YuL001aKGmnTAAOnAYZkxJgGtraCnFprk7d3eeXrdH6z/7Iryf6nrmmYSKMuvDI7kjRh2Z4uos8g+jU3xq+i/qVvop21G/JHs3ArlAr+kxfBf9fm+TyUNkdU07ppd1mc7a1HrVuW4u/dbyPVbWi0r7raSlhK7vi33OZs7QN/ilG3czJkwffxiujXj2Hw5yfZwdP0Vsrxkl5OxY9kV4vDTXi/ax7SnRwJUEXfSRop/2GS++zyOlrVqc0t2V27cHu+fI9XRqXWVZ813j9nLFEliwuHV9FOfOstOqZiLuSsIxJpF9Gezh7T0FSo01K2cqzatysU09g/xSb8LI9E4klAoevFu2aI7eSMeKZwZ7Cp2zH6s4Wv2G6T6ylfw4nupxIugmrM5PVg1SRPHuZIu2zymy9dGX4ZZV89x6FbFoyV9zj4mhrOjr3t6lPczdq10eg00GopX4Ihr4Gm1Nf2T2diLSljdfKOd/p2j/AAfV/qSh0dor91/+mdZd5NGv6fH+1GN7Wb9z/JGjTUUorglZEwC9dGduwAAAR5skRa5gBsWyFkkAYsYcSQAKp07lfUmyDlHbNdUSXUlxGoxSFmvKnyCol0Y3LBSFmv1Jnqi8HOKFlHVDqy8DiLNd0iUaZcDvEWVSgSSsSaI54CjgJJBIydAAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAAAAAAAAAAAAB//Z" alt="Descripción de la imagen">
     <ul>
         <li>Elemento de lista 1</li>
         <li>Elemento de lista 2</li>
@@ -225,7 +235,7 @@ export const elementsData2: Data = {
       'tag': 'template',
       'group': 'Elems. de estructura',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/template',
-      'description': 'El elemento <template> en HTML se utiliza para definir contenido que no se mostrará de forma inmediata en la página, pero que se puede clonar y utilizar posteriormente mediante scripts.',
+      'description': 'Se utiliza **para definir contenido que no se mostrará de forma inmediata en la página**, pero que se puede **clonar** y **utilizar** posteriormente mediante scripts.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
@@ -233,7 +243,7 @@ export const elementsData2: Data = {
 </head>
 <body>
     <!-- Contenido visible de la página -->
-    
+    <p>Hola mundo</p>
     <template id="miTemplate">
         <h1>Título del elemento clonado</h1>
         <p>Este es un contenido clonado desde el template.</p>
@@ -682,9 +692,11 @@ export const elementsData2: Data = {
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist',
       'description': 'El elemento "**<datalist>**" de HTML se utiliza junto con el elemento "**<input>**" para proporcionar una lista desplegable de opciones para que los usuarios elijan.',
-      'codeHTML': `<label for="fruta">Selecciona una fruta:</label>
+      'codeHTML': `<!-- nuestro input -->
+<label for="fruta">Selecciona una fruta:</label>
 <input list="frutas" id="fruta" name="fruta">
 
+<!-- aqui ponemos los posibles valores -->
 <datalist id="frutas">
   <option value="Manzana">
   <option value="Plátano">
