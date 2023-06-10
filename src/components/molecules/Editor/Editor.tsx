@@ -11,16 +11,17 @@ import { themeJS } from '../../../themes/themeJS'
 type Props = {
   htmlDefault: string
   cssDefault: string
+  jsDefault: string
 }
 
 type Values = 'html' | 'css' | 'js'
 
-export const Editor = ({htmlDefault = '', cssDefault = ''}:Props) => {
+export const Editor = ({htmlDefault = '', cssDefault = '', jsDefault = ''}:Props) => {
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
   const [htmlCode, setHtmlCode] = useState<string>(htmlDefault)
   const [cssCode, setCssCode] = useState<string>(cssDefault)
-  const [jsCode, setJsCode] = useState<string>(cssDefault)
+  const [jsCode, setJsCode] = useState<string>(jsDefault)
 
   // const [htmlCodeVisible, setHTMLVIsible] = useState<boolean>(true)
   const [languageVisible, setLanguageVisible] = useState<Values>('html')

@@ -9,8 +9,9 @@ export type ItemHTML = {
   group: VariantGroup,
   url: string,
   description: string,
-  codeHTML: string,
-  codeCSS: string
+  codeHTML?: string,
+  codeCSS?: string
+  codeJS?: string,
 }
 
 type VariantGroup =

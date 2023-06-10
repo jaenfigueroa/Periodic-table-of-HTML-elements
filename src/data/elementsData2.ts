@@ -22,7 +22,6 @@ export const elementsData2: Data = {
 
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'head',
@@ -45,7 +44,6 @@ export const elementsData2: Data = {
 
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'title',
@@ -64,7 +62,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'base',
@@ -84,7 +81,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'link',
@@ -108,7 +104,6 @@ export const elementsData2: Data = {
 
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'meta',
@@ -133,7 +128,6 @@ export const elementsData2: Data = {
 
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'style',
@@ -160,7 +154,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'noscript',
@@ -182,7 +175,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'script',
@@ -203,7 +195,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'body',
@@ -229,7 +220,6 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'template',
@@ -242,83 +232,80 @@ export const elementsData2: Data = {
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
-    <p>Hola mundo</p>
-    <template id="miTemplate">
-        <h1>Título del elemento clonado</h1>
-        <p>Este es un contenido clonado desde el template.</p>
-    </template>
+    <div id='container'></div>
 
-    <script>
-        // Clonar y mostrar el contenido del template
-        const template = document.getElementById("miTemplate");
-        const clone = template.content.cloneNode(true);
-        document.body.appendChild(clone);
-    </script>
+    <template id="miTemplate">
+      <h2>Título del elemento clonado</h2>
+      <p>Contenido del elemento clonado.</p>
+    </template>
 </body>
 </html>
 `,
-      'codeCSS': '',
-    },
+      'codeCSS':`#container{
+  border:1px solid red;
+}`,
+      'codeJS': `const miContainer = document.getElementById('container');
 
+// Obtén una referencia al template utilizando su ID
+const miTemplate = document.getElementById('miTemplate');
+
+// Clona el contenido del template
+const clonedElement = miTemplate.content.cloneNode(true);
+
+// Agrega el elemento clonado al cuerpo del documento
+miContainer.appendChild(clonedElement);
+      `,
+    },
     /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'p',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/p',
-      'description': 'El elemento <p> en HTML se utiliza para representar un párrafo de texto en un documento HTML. Es uno de los elementos más comunes y básicos para estructurar y formatear el contenido de texto.',
+      'description': `Se utiliza para **representar un párrafo de texto** en un documento HTML.
+
+Es uno de los elementos más comunes y básicos para estructurar y formatear el contenido de texto.`,
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
     <p>Este es un párrafo de ejemplo.</p>
     <p>Este es otro párrafo.</p>
     <p>Y aquí hay un tercer párrafo.</p>
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'span',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/span',
-      'description': 'El elemento <span> en HTML se utiliza para aplicar estilos o seleccionar partes específicas de texto dentro de un documento HTML. A diferencia del elemento <p>, el elemento <span> no representa un bloque de texto independiente, sino que se utiliza para aplicar estilos o manipular partes más pequeñas de texto dentro de un bloque de texto más grande.',
-      'codeHTML': `<!DOCTYPE html>
-<html>
-<head>
-    <title>Título de la página</title>
-    <style>
-        .resaltado {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <!-- Contenido visible de la página -->
-    <p>Este es un texto de ejemplo con <span class="resaltado">una parte resaltada</span>.</p>
-    <p>Otro <span style="font-style: italic;">texto</span> con diferentes estilos.</p>
-</body>
-</html>
+      'description': 'A diferencia del elemento **<p>**, el elemento **<span>** no representa un bloque de texto independiente, sino que **se utiliza para aplicar estilos o manipular partes más pequeñas de texto dentro de un bloque de texto más grande**.',
+      'codeHTML': `<p>Este es un texto con <span class="resaltado">una parte resaltada</span>.</p>
+<p>Otro <span class="cursiva">texto</span> con diferentes estilos.</p>
 `,
-      'codeCSS': '',
+      codeCSS: `.resaltado {
+  color: red;
+  font-weight: bold;
+}
+
+.cursiva{
+  font-style: italic;
+  color: blue;
+}`,
     },
     {
       'tag': 'h1 - h6',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/h1',
-      'description': 'Las etiquetas <h1> a <h6> en HTML se utilizan para definir encabezados o títulos de diferentes niveles de importancia en una página web. La etiqueta <h1> representa el encabezado de nivel más alto y la etiqueta <h6> representa el encabezado de nivel más bajo.',
+      'description': 'Las etiquetas **<h1>** a **<h6>** se utilizan para **definir encabezados o títulos de diferentes niveles de importancia en una página web**. La etiqueta <h1> representa el encabezado de nivel más alto y la etiqueta <h6> representa el encabezado de nivel más bajo.',
       'codeHTML': `<!DOCTYPE html>
 <html>
 <head>
     <title>Título de la página</title>
 </head>
 <body>
-    <!-- Contenido visible de la página -->
     <h1>Encabezado de nivel 1</h1>
     <h2>Encabezado de nivel 2</h2>
     <h3>Encabezado de nivel 3</h3>
@@ -328,40 +315,53 @@ export const elementsData2: Data = {
 </body>
 </html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'address',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/address',
-      'description': 'En HTML, el elemento <address> se utiliza para representar información de contacto o de ubicación, como una dirección postal, un número de teléfono o una dirección de correo electrónico.',
-      'codeHTML': `<address>
-  Nombre de la persona o entidad<br>
-  Dirección<br>
-  Ciudad, Estado, Código postal<br>
-  Teléfono: <a href="tel:+123456789">123-456-789</a><br>
-  Correo electrónico: <a href="mailto:info@example.com">info@example.com</a>
-</address>
+      'description': 'Se utiliza para **representar información de contacto o detalles de ubicación**, como una dirección postal, un número de teléfono o una dirección de correo electrónico.',
+      'codeHTML': `<!DOCTYPE html>
+<html>
+<head>
+    <title>Título de la página</title>
+</head>
+<body>
+    <address>
+        Leche Gloria S.A.A.<br>
+        Av. Argentina 4793<br>
+        Callao 07021, Perú<br>
+        Teléfono: <a href="tel:+5117156000">+51 1 7156000</a><br>
+        Email: <a href="mailto:info@lechegloria.pe">info@lechegloria.pe</a>
+    </address>
+</body>
+</html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'blockquote',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/blockquote',
-      'description': 'El elemento <blockquote> se utiliza para resaltar citas o fragmentos de texto que han sido extraídos de otra fuente.',
-      'codeHTML': `<blockquote>
-  <p>Texto citado aquí.</p>
-  <footer>Autor de la cita</footer>
-</blockquote>
+      'description': 'Se utiliza para **resaltar citas o fragmentos de texto que han sido extraídos de otra fuente**.',
+      'codeHTML': `<!DOCTYPE html>
+<html>
+<head>
+    <title>Título de la página</title>
+</head>
+<body>
+    <blockquote cite="https://www.brainyquote.com/quotes/albert_einstein">
+        <p>"La creatividad es la inteligencia divirtiéndose." </p>
+        <footer>Albert Einstein</footer>
+    </blockquote>
+</body>
+</html>
 `,
-      'codeCSS': '',
     },
     {
       'tag': 'pre',
       'group': 'Elems. de texto',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/pre',
-      'description': 'El elemento <pre> se utiliza para mostrar texto preformateado, lo que significa que conservará el espaciado y los saltos de línea tal como están escritos en el código fuente.',
+      'description': 'Se utiliza para **mostrar texto preformateado**, lo que significa que **conservará el espaciado y los saltos de línea tal como están escritos en el código fuente**.',
       'codeHTML': `<pre>
   function calcularPromedio() {
     var notas = [8, 7, 9, 6, 8];
@@ -376,16 +376,13 @@ export const elementsData2: Data = {
   }
 </pre>
 `,
-      'codeCSS': '',
     },
-
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'a',
       'group': 'Elems. de enlace',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/a',
-      'description': 'El Elemento HTML Anchor <a> crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.',
-      'codeHTML': `<p>You can reach Michael at:</p>
+      'description': '**Se utiliza para crear enlaces (hipervínculos)** a otras páginas web, archivos, ubicaciones dentro del mismo documento o direcciones de correo electrónico, o cualquier otra URL.',
+      'codeHTML': `<p>Puede ponerse en contacto con Mario en:</p>
 
 <ul>
   <li><a href="https://example.com">Website</a></li>
@@ -393,243 +390,233 @@ export const elementsData2: Data = {
   <li><a href="tel:+123456789">Phone</a></li>
 </ul>
 `,
-      'codeCSS': '',
+      'codeJS': '',
     },
-
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'em',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/em',
-      'description': 'El elemento <em> se utiliza para resaltar texto enfatizado dentro de un bloque de texto. El texto enfatizado generalmente se muestra en cursiva por defecto en la mayoría de los navegadores web. ',
+      'description': 'Se utiliza **para resaltar texto enfatizado dentro de un bloque de texto**. El texto enfatizado generalmente se muestra en cursiva por defecto en la mayoría de los navegadores web. <i> esta obsoleto, es mejor usar <em>',
       'codeHTML': '<p>Por favor, <em>no toques</em> el objeto caliente.</p>',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'strong',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/strong',
-      'description': 'El elemento <strong> se utiliza para resaltar texto fuertemente, es decir, para indicar que una parte del contenido tiene mayor importancia o énfasis. A diferencia del elemento <em>, el texto resaltado con <strong> no tiene un estilo de visualización específico asociado de forma predeterminada.',
+      'description': 'Se utiliza para **resaltar texto fuertemente**, es decir, para **indicar que una parte del contenido tiene mayor importancia o énfasis**. A diferencia del elemento <em>, el texto resaltado con <strong> no tiene un estilo de visualización específico asociado de forma predeterminada. <b> esta obsoleto, es mejor usar <strong>',
       'codeHTML': '<p>¡Advertencia! <strong>No ingresar sin autorización</strong>.</p>',
-      'codeCSS': '',
     },
     {
       'tag': 'small',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/small',
-      'description': 'El elemento <small> se utiliza para representar texto en una escala más pequeña, generalmente para indicar información adicional, notas a pie de página o contenido de menor importancia.',
-      'codeHTML': '<p>El precio indicado es sin impuestos. <small>Los impuestos aplicables se agregarán al finalizar la compra.</small></p>',
-      'codeCSS': '',
+      'description': 'Se utiliza para **representar texto en una escala más pequeña**, generalmente para **indicar información adicional, notas a pie de página o contenido de menor importancia**.',
+      'codeHTML': `<p>El precio indicado es sin impuestos.
+  <small>Los impuestos aplicables se agregarán al finalizar la compra.</small>
+</p>`,
     },
-
-    /* XXXXXXXXXXXXXXXX */
-    /* XXXXXXXXXXXXXXXX */
-    /* XXXXXX ME QUEDE AQUI XXXXXXXXXX */
-    /* XXXXXXXX como se usa span en html XXXXXXXX */
-    /* XXXXXXXXXXXXXXXX */
-
     {
       'tag': 's',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/s',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': `Se utiliza para **representar texto que ha sido eliminado o que ya no es válido**.
+
+Se suele mostrar con una línea horizontal a través del texto. Se utiliza principalmente para indicar una modificación o una eliminación, y no se debe utilizar solo con fines estilísticos`,
+      'codeHTML': '<p>Este es un texto de ejemplo <s>tachado</s>.</p>',
     },
     {
       'tag': 'cite',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/cite',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza **para brindar información sobre la fuente de una cita o referencia**, y se recomienda utilizarlo en situaciones en las que se hace una referencia explícita a una obra o recurso, como un libro, un artículo, una película, etc.',
+      'codeHTML': `<p>Según el autor,
+    <cite>Título del libro</cite>
+    es una obra imprescindible para comprender el tema.
+</p>
+`,
     },
     {
       'tag': 'q',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/q',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **indicar citas en línea, es decir, fragmentos cortos de texto que se extraen de una fuente externa** y se muestra entre comillas (comillas dobles) en la mayoría de los navegadores. Es importante destacar que el elemento "q" se utiliza para citar texto breve en línea y **no debe confundirse con el elemento "blockquote"** que se utiliza para citas más largas o bloques de texto citados.',
+      'codeHTML': '<p>El autor dijo: <q>Este es un ejemplo de una cita en línea.</q></p>',
     },
     {
       'tag': 'dfn',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dfn',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **definir el significado de un término o una frase**. El término definido se muestra resaltado en negrita o cursiva para destacarlo.',
+      'codeHTML': '<p>La etiqueta <dfn>dfn</dfn> se utiliza para definir términos en HTML.</p>',
     },
     {
       'tag': 'abbr',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/abbr',
-      'description': 'El elemento HTML <abbr> (o Elemento de Abreviación HTML) representa una abreviación o acrónimo; el atributo opcional title puede ampliar o describir la abreviatura. Si está presente, el atributo title debe contener la descripción completa y nada más.',
+      'description': 'Es un elemento de Abreviación, **representa una abreviación o acrónimo**; el atributo opcional title puede ampliar o describir la abreviatura. Si está presente, el atributo title debe contener la descripción completa y nada más.',
       'codeHTML': '<p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>',
-      'codeCSS': '',
-    },
-    {
-      'tag': 'data',
-      'group': 'Elems. de enfasis',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/data',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'time',
       'group': 'Elems. de enfasis',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/time',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **representar fechas y horas en un formato estructurado y semántico**',
+      'codeHTML': `<p>La fecha de publicación es
+    <time datetime="2023-06-10">10 de junio de 2023</time>.
+</p>`,
     },
-
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
-    {
-      'tag': 'i',
-      'group': 'Elems. de estilo',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/i',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
-    },
-
-    {
-      'tag': 'b',
-      'group': 'Elems. de estilo',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/b',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
-    },
-    {
-      'tag': 'u',
-      'group': 'Elems. de estilo',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/u',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
-    },
-
+    // {
+    //   'tag': 'i',
+    //   'group': 'Elems. de estilo',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/i',
+    //   'description': 'Se utiliza para **aplicar estilo a un fragmento de texto y mostrarlo en cursiva**. Sin embargo, es importante tener en cuenta que la etiqueta <i> se utiliza principalmente para indicar un cambio en el estilo de fuente, no para transmitir información adicional o énfasis semántico',
+    //   'codeHTML': '<p>Este es un texto de ejemplo <i>en cursiva</i>.</p>',
+    // },
+    // {
+    //   'tag': 'b',
+    //   'group': 'Elems. de estilo',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/b',
+    //   'description': '',
+    //   'codeHTML': '',
+    //   'codeJS': '',
+    // },
+    // {
+    //   'tag': 'u',
+    //   'group': 'Elems. de estilo',
+    //   'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/u',
+    //   'description': '',
+    //   'codeHTML': '',
+    //   'codeJS': '',
+    // },
     {
       'tag': 'mark',
       'group': 'Elems. de estilo',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/mark',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **resaltar o destacar un fragmento de texto dentro de un párrafo u otro elemento de texto**. El contenido envuelto se mostrará con un fondo resaltado por defecto, generalmente en amarillo, se utiliza comúnmente para resaltar términos de búsqueda o partes importantes de un texto.',
+      'codeHTML': '<p>Texto de ejemplo <mark>resaltado</mark> dentro de un párrafo.</p>',
     },
-
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'code',
       'group': 'Elems. de codigo y variable',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/code',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **marcar un fragmento de texto como código o código de programación**. El contenido dentro de la etiqueta <code> se mostrará en una fuente de monoespacio y con un estilo predeterminado que puede variar según el navegador. Si deseas resaltar aún más el código, puedes combinar la etiqueta **<code>** con la etiqueta **<pre>** para preservar el formato y los espacios en blanco del código.',
+      'codeHTML': `<pre>
+<code>function sumar(a, b) {
+  return a + b;
+}
+</code>
+</pre>
+`,
     },
     {
       'tag': 'var',
       'group': 'Elems. de codigo y variable',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/var',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **marcar una variable o un valor variable dentro de un texto**. Esta etiqueta se utiliza principalmente en contextos matemáticos o científicos para representar variables. La etiqueta <var> no proporciona ningún estilo o funcionalidad adicional por sí misma. Simplemente indica visualmente que el contenido marcado es una variable. Puedes utilizar CSS para aplicar estilos adicionales a los elementos <var>, como cambiar el color de fuente o aplicar estilos específicos para resaltar las variables en tu documento.',
+      'codeHTML': `<p>La fórmula del área de un círculo es:
+  <var>A</var> = <var>π</var>r<sup>2</sup>.
+</p>`,
     },
-
-
     {
       'tag': 'samp',
       'group': 'Elems. de codigo y variable',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/samp',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **representar una salida de muestra, como una salida de programa o una respuesta de un sistema**. Indica que el contenido dentro de la etiqueta representa una muestra o ejemplo de salida.',
+      'codeHTML': '<p>La salida del programa es: <samp>Hola, mundo!</samp></p>',
     },
     {
       'tag': 'kbd',
       'group': 'Elems. de codigo y variable',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/kbd',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **representar la entrada del usuario a través del teclado, como pulsaciones de teclas o combinaciones de teclas**. Se utiliza para resaltar y mostrar visualmente la entrada del teclado, por defecto no proporciona estilos pero con CSS lo puedes hacer.',
+      'codeHTML': '<p>Pulsa la tecla <kbd>Enter</kbd> para enviar el formulario.</p>',
+      codeCSS: `kbd {
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+kbd:hover {
+  background-color: #e0e0e0;
+}
+
+kbd:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+}`,
     },
     {
       'tag': 'sup',
       'group': 'Elems. de codigo y variable',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sup',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sub',
+      'description': 'Se utiliza para **representar texto o contenido que debe mostrarse como superíndice**, es decir, en una posición superior a la línea de texto principal. Se utiliza comúnmente para representar exponentes, números ordinales o notas a pie de página.',
+      'codeHTML': `<p>La fórmula química del dióxido de carbono es CO<sup>2</sup>.
+</p><p>Hoy es el 1<sup>er</sup> de enero.</p>`,
     },
     {
       'tag': 'sub',
       'group': 'Elems. de codigo y variable',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sub',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/sup',
+      'description': 'Se utiliza para **representar texto o contenido que debe mostrarse como subíndice**, es decir, en una posición inferior a la línea de texto principal. Se utiliza comúnmente para representar fórmulas matemáticas, fórmulas químicas o notas a pie de página.',
+      'codeHTML': '<p>La fórmula química del agua es H<sub>2</sub>O.</p>',
     },
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'ruby',
       'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ruby',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para representar texto con anotaciones ruby. Las anotaciones ruby **son pequeñas anotaciones o explicaciones que se colocan encima o al lado de caracteres o palabras** para proporcionar su pronunciación o significado.',
+      'codeHTML': '<ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>字<ruby>辞<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>典<ruby>（<rp>(</rp><rt>てん</rt><rp>)</rp></ruby>） ',
     },
     {
       'tag': 'rt',
       'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/rt',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza en conjunto con la etiqueta <ruby> para **representar la pronunciación o significado de los caracteres o palabras**. La etiqueta <rt> se coloca dentro de la etiqueta **<ruby>** para indicar la anotación ruby asociada.',
+      'codeHTML': '<ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>字<ruby>辞<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>典<ruby>（<rp>(</rp><rt>てん</rt><rp>)</rp></ruby>） ',
     },
     {
       'tag': 'rp',
       'group': 'Elems. para anotaciones ruby',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/rp',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza en conjunto con la etiqueta <ruby> para **proporcionar paréntesis de reserva en caso de que el navegador no admita o muestre las anotaciones ruby**.',
+      'codeHTML': '<ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>字<ruby>辞<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>典<ruby>（<rp>(</rp><rt>てん</rt><rp>)</rp></ruby>）',
     },
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'bdi',
       'group': 'Elems. de direccion',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/bdi',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **aislar una parte del texto** que debe ser formateada de manera independiente del texto que la rodea, especialmente cuando se trata de **texto en diferentes idiomas o direcciones de escritura**.',
+      'codeHTML': '<p>El resultado es: <bdi>مرحبا بك</bdi></p>',
     },
     {
       'tag': 'bdo',
       'group': 'Elems. de direccion',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/bdo',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **especificar la dirección de escritura de un fragmento de texto**, lo cual puede ser útil cuando se necesita cambiar la dirección de escritura de un fragmento de texto en un contexto específico. es especialmente útil cuando se trabaja con idiomas que se escriben de derecha a izquierda, como el árabe, el hebreo o el persa. También puede ser utilizado para fines de estilo y diseño, cuando se desea presentar un fragmento de texto con una dirección de escritura diferente.',
+      'codeHTML': `<p>Este es un ejemplo de texto en español: <bdo dir="rtl">¡Hola!</bdo></p>
+
+<!-- rtl = Right-to-Left -->`,
     },
-    /* XXXXXXXXXXXXXXXXXXXXXXX */
     {
       'tag': 'br',
       'group': 'Elems. de salto de linea',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/br',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para **insertar un salto de línea o una línea en blanco dentro de un texto**. No requiere una etiqueta de cierre y se considera una etiqueta de autocierra.',
+      'codeHTML': '<p>Este es un texto que se muestra en una línea.<br>Este es otro texto que aparecerá en la línea siguiente.</p>',
     },
     {
       'tag': 'wbr',
       'group': 'Elems. de salto de linea',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/wbr',
-      'description': '',
-      'codeHTML': '',
-      'codeCSS': '',
+      'description': 'Se utiliza para indicar un posible punto de quiebre opcional dentro de una palabra o una secuencia de caracteres. Sirve para indicar al navegador que puede realizar un salto de línea en ese punto si es necesario para ajustar el contenido en un espacio limitado.',
+      'codeHTML': '<p>Esta es una palabra larga que puede ser dividida en varias líneas si es necesario: supe<wbr>rcalifragilistic<wbr>expialidocious</p>',
     },
     {
       'tag': 'form',
@@ -637,7 +624,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/form',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'fieldset',
@@ -645,7 +632,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'legend',
@@ -653,7 +640,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/legend',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'label',
@@ -661,7 +648,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/label',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'input',
@@ -669,7 +656,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/input',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'button',
@@ -677,7 +664,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/button',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'select',
@@ -685,7 +672,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/select',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'datalist',
@@ -705,7 +692,7 @@ export const elementsData2: Data = {
   <option value="Uva">
 </datalist>
 `,
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     {
@@ -714,7 +701,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/optgroup',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'option',
@@ -722,7 +709,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/option',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'textarea',
@@ -730,7 +717,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/textarea',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'output',
@@ -738,7 +725,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/output',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'progress',
@@ -746,7 +733,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/progress',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'meter',
@@ -754,7 +741,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/meter',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'ul',
@@ -762,7 +749,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ul',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'ol',
@@ -770,7 +757,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ol',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'li',
@@ -778,7 +765,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/li',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     {
@@ -787,7 +774,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dl',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'dt',
@@ -795,7 +782,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dt',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'dd',
@@ -803,7 +790,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dd',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'div',
@@ -811,7 +798,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/div',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'header',
@@ -819,7 +806,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/header',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'nav',
@@ -827,7 +814,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/nav',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'aside',
@@ -835,7 +822,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/aside',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'main',
@@ -843,7 +830,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/main',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'section',
@@ -851,7 +838,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/section',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'article',
@@ -859,7 +846,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/article',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'footer',
@@ -867,7 +854,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'details',
@@ -875,7 +862,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/details',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'summary',
@@ -883,7 +870,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'dialog',
@@ -891,7 +878,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dialog',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'table',
@@ -899,7 +886,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/table',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'caption',
@@ -907,7 +894,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/caption',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'colgroup',
@@ -915,7 +902,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/colgroup',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'col',
@@ -923,7 +910,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/col',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'thead',
@@ -931,7 +918,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/thead',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'tbody',
@@ -939,7 +926,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tbody',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'tfoot',
@@ -947,7 +934,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tfoot',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'tr',
@@ -955,7 +942,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tr',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'th',
@@ -963,7 +950,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/th',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'td',
@@ -971,7 +958,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/td',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     {
@@ -980,7 +967,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/map',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'area',
@@ -988,7 +975,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/area',
       'description': 'Sirve para crear las distintas secciones en las que se puede dividir un mapas de imágenes en el cliente.',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'img',
@@ -996,7 +983,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/img',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'picture',
@@ -1004,7 +991,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/picture',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'audio',
@@ -1012,7 +999,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/audio',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'video',
@@ -1020,7 +1007,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/video',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'source',
@@ -1028,7 +1015,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/source',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'track',
@@ -1036,7 +1023,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/track',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     /* DEPRECADO */
     // {
@@ -1051,7 +1038,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/figure',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'figcaption',
@@ -1059,7 +1046,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/caption',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     {
@@ -1068,7 +1055,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/object',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     {
@@ -1077,7 +1064,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/param',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'iframe',
@@ -1085,7 +1072,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
 
@@ -1095,7 +1082,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/canvas',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'svg',
@@ -1103,7 +1090,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/svg',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
     {
       'tag': 'math',
@@ -1111,7 +1098,7 @@ export const elementsData2: Data = {
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/math',
       'description': '',
       'codeHTML': '',
-      'codeCSS': '',
+      'codeJS': '',
     },
 
     /* NUEVOS */
