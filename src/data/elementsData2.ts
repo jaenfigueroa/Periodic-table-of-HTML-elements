@@ -622,66 +622,262 @@ kbd:active {
       'tag': 'form',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/form',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear un formulario** en una página web. Los formularios son utilizados para recopilar información del usuario, como nombres, contraseñas, opciones seleccionadas, etc.',
+      'codeHTML': `<form action="/procesar-formulario" method="POST">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <input type="submit" value="Enviar">
+</form>
+`,
+      codeCSS: `form{
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: .3rem;
+}`,
     },
     {
       'tag': 'fieldset',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/fieldset',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar y etiquetar un conjunto de elementos relacionados en un formulario**. Proporciona una manera de organizar y estructurar los elementos del formulario de manera más semántica y visualmente coherente.',
+      'codeHTML': `<form>
+    <fieldset>
+        <legend>Información Personal</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferencias</legend>
+        <input type="checkbox" id="opc1" name="opcion1">
+        <label for="opc1">Opción 1</label><br>
+
+        <input type="checkbox" id="opc2" name="opcion2">
+        <label for="opc2">Opción 2</label><br>
+    </fieldset>
+
+    <input type="submit" value="Enviar">
+</form>
+`,
+      codeCSS: `form{
+  display:flex;
+  flex-direction: column;
+  gap:1rem;
+}`,
     },
     {
       'tag': 'legend',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/legend',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza dentro de la etiqueta <fieldset> para **proporcionar un título o una descripción al grupo de elementos relacionados en un formulario**.',
+      'codeHTML': `<fieldset>
+    <legend>Información Personal</legend>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+</fieldset>
+`,
     },
     {
       'tag': 'label',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/label',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **asociar una etiqueta descriptiva a un elemento de formulario**, como un campo de entrada o una casilla de verificación. El uso de la etiqueta <label> mejora la usabilidad del formulario, **ya que permite a los usuarios hacer clic en la etiqueta para activar el elemento correspondiente**.',
+      'codeHTML': `<!-- Primera forma -->
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre"><br>
+
+<!-- Segunda forma -->
+<label>
+  Apellido:
+  <input type="text" name="lastname">
+</label>
+`,
     },
     {
       'tag': 'input',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/input',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': `Se utiliza para **crear campos de entrada interactivos dentro de formularios web**. Los campos de entrada permiten a los usuarios ingresar y enviar datos al servidor.
+
+Cuando el usuario hace clic en el botón de imagen **<input type="image"/>**, se envía el formulario asociado al botón de la misma manera que lo haría un botón de envío. Además, las coordenadas x e y del clic del usuario en la imagen también se envían al servidor como parte de la solicitud, lo que puede ser útil en ciertos escenarios.`,
+      'codeHTML': `<!-- Campo de texto -->
+<label>Nombre:
+    <input type="text">
+</label><br>
+
+<!-- Campo de contraseña -->
+<label>Contraseña:
+    <input type="password">
+</label><br>
+
+<!-- Campo de correo electrónico -->
+<label>Correo electrónico:
+    <input type="email">
+</label><br>
+
+<!-- Campo de número -->
+<label>Número:
+    <input type="number">
+</label><br>
+
+<!-- Campo de teléfono -->
+<label>Teléfono:
+    <input type="tel">
+</label><br>
+
+<!-- Campo de fecha -->
+<label>Fecha:
+    <input type="date">
+</label><br>
+
+<!-- Campo de hora -->
+<label>Hora:
+    <input type="time">
+</label><br>
+
+<!-- Campo de búsqueda -->
+<label>Búsqueda:
+    <input type="search">
+</label><br>
+
+<!-- Campo de URL -->
+<label>URL:
+    <input type="url">
+</label><br>
+
+<!-- Campo de archivo -->
+<label>Archivo:
+    <input type="file">
+</label><br>
+
+<!-- Casilla de verificación -->
+<label>
+    <input type="checkbox">
+    Acepto los términos y condiciones
+</label><br>
+
+<!-- Botón de radio -->
+<label>
+    <input type="radio" name="genero" value="masculino">
+    Masculino
+</label>
+<label>
+    <input type="radio" name="genero" value="femenino">
+    Femenino
+</label><br>
+
+<!-- Botón de envío -->
+<input type="submit" value="Enviar"><br>
+
+<!-- Botón de reinicio -->
+<input type="reset" value="Reiniciar"><br>
+
+<!-- Botón de imagen -->
+<input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK5e-YX7QAeLZJByeZsGrRsckwKJgrTzN6Sg&usqp=CAU" alt="Botón de imagen"><br>
+
+<!-- Selector de color -->
+<label>Color:
+    <input type="color">
+</label><br>
+
+<!-- Barra de deslizamiento (rango) -->
+<label>Valor:
+    <input type="range" min="0" max="100" step="1">
+</label><br>
+
+<!-- Selector de fecha y hora -->
+<label>Fecha y hora:
+    <input type="datetime-local">
+</label><br>
+
+<!-- Selector de mes -->
+<label>Mes:
+    <input type="month">
+</label><br>
+
+<!-- Selector de semana -->
+<label>Semana:
+    <input type="week">
+</label><br>
+
+`,
     },
     {
       'tag': 'button',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/button',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear un botón interactivo** en una página web',
+      'codeHTML': `<button type="button">Haz clic</button>
+
+<button type="button">
+    <span class="icono"></span>
+    Clic aquí
+</button>`,
     },
     {
       'tag': 'select',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/select',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': `Se utiliza para crear una lista desplegable de opciones seleccionables.
+
+**name:** Especifica el nombre del elemento de selección. para cuando se envía el formulario.
+
+**size:** Define el número de opciones visibles a la vez en la lista desplegable.
+
+**multiple:** Para permitir seleccionar múltiples opciones en la lista desplegable.`,
+      'codeHTML': `<select name="frutas" size="5" multiple>
+    <option value="manzana">Manzana</option>
+    <option value="pera">Pera</option>
+    <option value="naranja">Naranja</option>
+    <option value="banana">Banana</option>
+    <option value="uva">Uva</option>
+    <option value="sandía">Sandía</option>
+    <option value="mango">Mango</option>
+    <option value="piña">Piña</option>
+    <option value="fresa">Fresa</option>
+    <option value="melón">Melón</option>
+    <option value="kiwi">Kiwi</option>
+    <option value="cereza">Cereza</option>
+    <option value="limón">Limón</option>
+    <option value="mandarina">Mandarina</option>
+    <option value="durazno">Durazno</option>
+    <option value="albaricoque">Albaricoque</option>
+    <option value="higo">Higo</option>
+    <option value="ciruela">Ciruela</option>
+    <option value="frambuesa">Frambuesa</option>
+    <option value="arándano">Arándano</option>
+    <option value="mora">Mora</option>
+    <option value="zarzamora">Zarzamora</option>
+    <option value="guayaba">Guayaba</option>
+    <option value="maracuyá">Maracuyá</option>
+    <option value="granada">Granada</option>
+    <option value="manzana verde">Manzana verde</option>
+    <option value="coco">Coco</option>
+    <option value="papaya">Papaya</option>
+    <option value="níspero">Níspero</option>
+    <option value="fruta de la pasión">Fruta de la pasión</option>
+</select>
+`,
     },
     {
       'tag': 'datalist',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/datalist',
-      'description': 'El elemento "**<datalist>**" de HTML se utiliza junto con el elemento "**<input>**" para proporcionar una lista desplegable de opciones para que los usuarios elijan.',
+      'description': 'Se utiliza junto con el elemento <input> para **proporcionar una lista de opciones sugeridas o autocompletadas** para el usuario',
       'codeHTML': `<!-- nuestro input -->
 <label for="fruta">Selecciona una fruta:</label>
-<input list="frutas" id="fruta" name="fruta">
+<input type="text" name="fruta" list="frutas">
 
 <!-- aqui ponemos los posibles valores -->
 <datalist id="frutas">
@@ -699,64 +895,109 @@ kbd:active {
       'tag': 'optgroup',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/optgroup',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza dentro del elemento <select> para **agrupar opciones relacionadas**. Esto permite organizar visualmente las opciones en categorías o grupos. ',
+      'codeHTML': `<select>
+  <optgroup label="Frutas">
+    <option value="manzana">Manzana</option>
+    <option value="pera">Pera</option>
+    <option value="naranja">Naranja</option>
+  </optgroup>
+  <optgroup label="Verduras">
+    <option value="zanahoria">Zanahoria</option>
+    <option value="lechuga">Lechuga</option>
+    <option value="tomate">Tomate</option>
+  </optgroup>
+</select>
+`,
     },
     {
       'tag': 'option',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/option',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza dentro del elemento <select> para **definir una opción seleccionable dentro de la lista desplegable**.',
+      'codeHTML': `<select>
+  <option value="opcion1">Opción 1</option>
+  <option value="opcion2">Opción 2</option>
+  <option value="opcion3">Opción 3</option>
+</select>
+`,
     },
     {
       'tag': 'textarea',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/textarea',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear un campo de texto de múltiples líneas** donde los usuarios pueden ingresar y editar texto.',
+      'codeHTML': '<textarea name="mensaje" rows="4" cols="30"></textarea>',
+      codeJS: `const obtenerTexto = () => {
+  let texto = document.getElementById("myTextarea").value;
+  console.log(texto);
+}
+`,
     },
     {
       'tag': 'output',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/output',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Se utiliza para **mostrar resultados de cálculos** o **procesos** en la página web, no está limitado a operaciones matemáticas, también puede mostrar resultados de validaciones, consultas de bases de datos u otros procesos.',
+      'codeHTML': `<form oninput="resultado.value = parseInt(num1.value) + parseInt(num2.value)">
+    <input type="number" id="num1" name="num1" step="1">
+    +
+    <input type="number" id="num2" name="num2" step="1">
+    =
+    <output name="resultado"></output>
+</form>
+`,
       'codeJS': '',
     },
     {
       'tag': 'progress',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/progress',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **mostrar visualmente el progreso de una tarea** o una operación en curso. Se utiliza principalmente para indicar el avance de una tarea determinada, como la carga de un archivo o la finalización de una descarga.',
+      'codeHTML': '<progress value="30" max="100">30%</progress>',
     },
     {
       'tag': 'meter',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/meter',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Se utiliza para **representar un valor dentro de un rango específico en una escala**, también puedes agregar texto descriptivo dentro del elemento <meter> para proporcionar más información sobre el valor. En este caso, el texto "75% completado" se mostrará dentro del elemento **<meter>** junto con la representación gráfica.',
+      'codeHTML': '<meter value="75" min="0" max="100">75% en curso</meter>',
       'codeJS': '',
     },
     {
       'tag': 'ul',
       'group': 'Elems. de lista',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ul',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Se utiliza para **crear una lista desordenada**, también conocida como lista con viñetas.',
+      'codeHTML': `<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2
+        <ul>
+          <li>Elemento 2.1</li>
+          <li>Elemento 2.2</li>
+        </ul>
+    </li>
+    <li>Elemento 3</li>
+</ul>
+`,
       'codeJS': '',
     },
     {
       'tag': 'ol',
       'group': 'Elems. de lista',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/ol',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Se utiliza para **crear una lista ordenada**, también conocida como lista **numerada**.',
+      'codeHTML': `<h2>¿Como hacer una torta?</h2>
+<ol>
+  <li>Pasos para preparar un pastel:</li>
+  <li>Mezclar los ingredientes secos en un recipiente.</li>
+  <li>Agregar los ingredientes líquidos y mezclar bien.</li>
+  <li>Verter la mezcla en un molde para pastel.</li>
+  <li>Hornear a 180°C durante 30 minutos.</li>
+  <li>Dejar enfriar y decorar según el gusto.</li>
+</ol>
+
+`,
       'codeJS': '',
     },
     {
