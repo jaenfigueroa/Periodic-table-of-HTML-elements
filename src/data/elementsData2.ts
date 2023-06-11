@@ -1511,27 +1511,38 @@ tr:nth-child(even) {
       'codeHTML': `<table>
     <colgroup>
         <col style="background-color: yellow;">
-        <col span="2" style="background-color: lightblue;">
-        <col span="1" style="background-color: pink;" width="150px">
+        <col span="1" style="background-color: lightblue;">
+        <col span="1" style="background-color: pink;" width="160px">
     </colgroup>
-    <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
-        <th>País</th>
-        <th>Sexo</th>
-    </tr>
-    <tr>
-        <td>John Doe</td>
-        <td>25</td>
-        <td>Estados Unidos</td>
-        <td>Masculino</td>
-    </tr>
-    <tr>
-        <td>Jane Smith</td>
-        <td>30</td>
-        <td>Canadá</td>
-        <td>Fenenino</td>
-    </tr>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
 </table>
 `,
       'codeJS': '',
@@ -1540,23 +1551,42 @@ tr:nth-child(even) {
       'tag': 'col',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/col',
-      'description': 'Es un **elemento utilizado dentro de un elemento **<colgroup>** en una tabla** HTML. El elemento **<colgroup>** se utiliza para agrupar las columnas de una tabla y puede contener uno o varios elementos **<col>**. Puedes ajustar las propiedades de cada columna utilizando los atributos y estilos de CSS en el elemento **<col>**. Por ejemplo, puedes establecer el ancho de una columna utilizando el atributo width o estilos CSS como width: 200px;.',
+      'description': 'Es un **elemento utilizado dentro de un elemento **<colgroup>** en una tabla** HTML. El elemento **<colgroup>** se utiliza para agrupar las columnas de una tabla y puede contener uno o varios elementos **<col>**. Puedes ajustar las propiedades de cada columna utilizando los atributos y estilos de CSS en el elemento **<col>**. Por ejemplo, puedes establecer el ancho de una columna utilizando el atributo width o estilos CSS como width: 170px;.',
       'codeHTML': `<table>
     <colgroup>
         <col style="background-color: yellow;">
         <col style="background-color: cyan;">
-        <col style="background-color: pink;" width="200px">
+        <col style="background-color: pink;" width='170px'>
     </colgroup>
-    <tr>
-        <th>Columna 1</th>
-        <th>Columna 2</th>
-        <th>Columna 3</th>
-    </tr>
-    <tr>
-        <td>Dato 1</td>
-        <td>Dato 2</td>
-        <td>Dato 3</td>
-    </tr>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
 </table>
 `,
       'codeJS': '',
@@ -1588,6 +1618,14 @@ tr:nth-child(even) {
             <td>Dato 6</td>
         </tr>
     </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
 </table>
 `,
       'codeCSS': `  table {
@@ -1608,6 +1646,7 @@ th {
 
 thead {
     font-weight: bold;
+    border:2px dashed red;
 }`,
     },
     {
@@ -1637,6 +1676,14 @@ thead {
             <td>Dato 6</td>
         </tr>
     </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
 </table>
 `,
       'codeCSS': `  table {
@@ -1657,7 +1704,12 @@ th {
 
 thead {
     font-weight: bold;
-}`,
+}
+
+tbody{
+    border:2px dashed blue;
+}
+`,
     },
     {
       'tag': 'tfoot',
@@ -1714,13 +1766,19 @@ th {
 
 thead {
     font-weight: bold;
-}`,
+}
+
+tfoot{
+    border:2px dashed green;
+}
+
+`,
     },
     {
       'tag': 'tr',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tr',
-      'description': 'Se utiliza para **definir una fila en una tabla**. Cada fila de una tabla HTML debe estar contenida dentro de un elemento **<tr>**. Las celdas de datos dentro de esa fila se definen utilizando elementos **<td>** o **<th>**.',
+      'description': 'Se utiliza para **definir cada una de las filas en una tabla**. Cada fila de una tabla HTML debe estar dentro de un elemento **<thead>,<tbody>** o **<tfoot>**. Las celdas de datos dentro de esa fila se definen utilizando elementos **<th>** o **<td>**.',
       'codeHTML': `<table>
     <!-- encabezado -->
     <thead>
@@ -1763,6 +1821,10 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
     border: 1px solid #ddd;
+}
+
+tr{
+  border: 2px dashed red;
 }
 
 th {
@@ -1777,7 +1839,7 @@ thead {
       'tag': 'th',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/th',
-      'description': 'Se utiliza para **definir un encabezado de columna o fila en una tabla**. El encabezado de columna se coloca dentro de un elemento **<thead>**, mientras que el encabezado de fila se coloca dentro de un elemento **<th>** directamente dentro de un elemento **<tr>**. El uso de **<th>** en lugar de **<td>** proporciona un estilo y formato visualmente diferente para resaltar los encabezados en la tabla.',
+      'description': 'Se utiliza para **definir cada una de las celdas de encabezado en una tabla**. Esta celda se utiliza típicamente en la primera fila o columna, para describir el contenido de las celdas correspondientes en las filas o columnas siguientes. El uso de **<th>** en lugar de **<td>** proporciona un estilo y formato visualmente diferente para resaltar los encabezados en la tabla.',
       'codeHTML': `<table>
     <!-- encabezado -->
     <thead>
@@ -1824,6 +1886,7 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+    border: 2px dashed blue;
 }
 
 thead {
@@ -1834,7 +1897,7 @@ thead {
       'tag': 'td',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/td',
-      'description': 'Se utiliza para **definir una celda de datos dentro de una tabla**. Cada celda de datos debe estar contenida dentro de un elemento **<td>**. Las celdas se organizan en filas utilizando el elemento **<tr>**.',
+      'description': 'Se utiliza para **definir cada una de las celdas de datos del cuerpo de una tabla**. Cada celda **<td>** se coloca dentro de una fila **<tr>** en la estructura de la tabla.',
       'codeHTML': `<table>
     <!-- encabezado -->
     <thead>
@@ -1881,6 +1944,10 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+td {
+    border: 2px dashed green;
 }
 
 thead {
