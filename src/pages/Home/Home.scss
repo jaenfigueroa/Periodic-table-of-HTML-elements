@@ -8,6 +8,12 @@
 .table-container {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
-  gap: 8rem;
+  // gap: 6rem;
+  // gap: 8rem;
+  gap: 4rem;
+}
+
+summary {
+  color: rgb(186, 186, 186);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
