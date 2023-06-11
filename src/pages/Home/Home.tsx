@@ -1,18 +1,20 @@
 import './Home.scss'
-import { PeriodicTable } from '../../components/organisms/PeriodicTable/PeriodicTable'
-import { Github } from '../../components/atoms/Github/Github'
 import { elementsData2 } from '../../data/elementsData2'
+import { Main } from '../../components/organisms/Main/Main'
+import { Header } from '../../components/atoms/Header/Header'
+import { Table } from '../../components/molecules/Table/Table'
+import { Distribution } from '../../components/molecules/Distribution/Distribution'
 
 export const Home = () => {
   return (
     <section className='Home'>
-      <Github/>
-      {
-        elementsData2 && <PeriodicTable
-          mainContent={elementsData2.elements}
-          distributionContent={elementsData2.distribution}
-        />
-      }
+      <Header/>
+      <Main>
+        <div className='table-container'>
+          <Table periodicContent={elementsData2.elements} />
+          <Distribution distributionContent={elementsData2.distribution} />
+        </div>
+      </Main>
     </section>
   )
 }

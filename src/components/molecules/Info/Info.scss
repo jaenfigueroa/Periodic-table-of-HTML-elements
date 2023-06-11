@@ -9,6 +9,10 @@
   position: relative;
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &__button-close {
     position: absolute;
     top: 15px;
@@ -30,16 +34,38 @@
   }
 
   &__title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   &__description {
+    padding: 1.3rem;
+    border-radius: .5rem;
+    background: #eaffea;
+    border: 1px solid rgb(127, 185, 130);
     text-align: center;
-    font-size: 1.9rem;
+    width: max-content;
+    max-width: 100%;
+    margin: auto;
+
+    * {
+      font-size: 1.7rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    strong {
+      // color: rgb(118, 80, 255);
+      // color: rgb(65, 120, 63);
+      // color: rgb(58, 106, 56);
+      color: rgb(36, 66, 35);
+      // font-weight: 600;
+      text-decoration: underline;
+    }
   }
+
+
 
   @media (min-widtH: 460px) {
     min-height: auto;
@@ -49,20 +75,5 @@
     border-radius: .5rem;
     width: clamp(200px, 90%, 1100px);
     max-height: 680px;
-  }
-}
-
-.aver {
-  // border: 1px solid red;
-  padding: 2rem;
-  border-radius: .5rem;
-  background: rgb(169, 255, 173, .3);
-  text-align: center;
-  width: max-content;
-  max-width: 100%;
-  margin: auto;
-
-  * {
-    font-size: 1.8rem;
   }
 }

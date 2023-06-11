@@ -21,7 +21,7 @@ export const Info = ({ element }: Props) => {
         <h2 className='info__title'>&lt;{element.tag}&gt;</h2>
         {
           element.description && (
-            <div className='aver'>
+            <div className='info__description'>
               <ReactMarkdown>{element.description}</ReactMarkdown>
             </div>
           )
