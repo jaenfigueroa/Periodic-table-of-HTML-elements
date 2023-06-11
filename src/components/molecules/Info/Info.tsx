@@ -28,8 +28,9 @@ export const Info = ({ element }: Props) => {
         }
       </header>
       <Editor
-        htmlDefault={element.codeHTML}
-        cssDefault={element.codeCSS}
+        htmlDefault={element.codeHTML || ''}
+        cssDefault={element.codeCSS || ''}
+        jsDefault={element.codeJS || ''}
       />
     </div>
   )
