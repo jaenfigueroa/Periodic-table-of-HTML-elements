@@ -2,7 +2,7 @@
   // border: 2px dashed red;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
   div {
 
@@ -19,7 +19,14 @@
       &:nth-child(#{$i}) {
         grid-row: 2;
         grid-column: $i - 14;
-        // background: red;
+      }
+    }
+
+    /* FILA 3 */
+    @for $i from 29 through 43 {
+      &:nth-child(#{$i}) {
+        grid-row: 3;
+        grid-column: $i - 28;
       }
     }
   }
