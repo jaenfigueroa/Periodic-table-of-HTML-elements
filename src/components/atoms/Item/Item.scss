@@ -5,12 +5,13 @@
   align-items: center;
   gap: 1rem;
   width: max-content;
-  width: 250px;
+  width: 280px;
 
   &__name {
     font-weight: 350;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #f7f7f7;
+    font-size: 1.75rem;
   }
 
   &__color {
