@@ -1,13 +1,14 @@
 .header {
   width: 100%;
   padding: 2rem;
+  padding: 1.6rem;
   display: flex;
   justify-content: space-between;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.15));
   gap: 1rem;
 
   &__logo {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 3vw, 2.2rem);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
   }

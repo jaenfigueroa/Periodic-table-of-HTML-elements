@@ -1512,7 +1512,7 @@ tr:nth-child(even) {
     <colgroup>
         <col style="background-color: yellow;">
         <col span="2" style="background-color: lightblue;">
-        <col span="1" style="background-color: pink;">
+        <col span="1" style="background-color: pink;" width="150px">
     </colgroup>
     <tr>
         <th>Nombre</th>
@@ -1540,57 +1540,352 @@ tr:nth-child(even) {
       'tag': 'col',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/col',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Es un **elemento utilizado dentro de un elemento **<colgroup>** en una tabla** HTML. El elemento **<colgroup>** se utiliza para agrupar las columnas de una tabla y puede contener uno o varios elementos **<col>**. Puedes ajustar las propiedades de cada columna utilizando los atributos y estilos de CSS en el elemento **<col>**. Por ejemplo, puedes establecer el ancho de una columna utilizando el atributo width o estilos CSS como width: 200px;.',
+      'codeHTML': `<table>
+    <colgroup>
+        <col style="background-color: yellow;">
+        <col style="background-color: cyan;">
+        <col style="background-color: pink;" width="200px">
+    </colgroup>
+    <tr>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+    </tr>
+    <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+        <td>Dato 3</td>
+    </tr>
+</table>
+`,
       'codeJS': '',
     },
     {
       'tag': 'thead',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/thead',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar el contenido de encabezado de una tabla**. Proporciona una estructura semántica que separa visualmente el encabezado de la tabla del cuerpo de la misma.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+        <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+        </tr>
+    </tbody>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
     {
       'tag': 'tbody',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tbody',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar el contenido del cuerpo de una tabla**. Ayuda a estructurar y organizar las filas y celdas de datos de una tabla de manera semántica.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+        <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+        </tr>
+    </tbody>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
     {
       'tag': 'tfoot',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tfoot',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar el contenido del pie de una tabla**. Proporciona una forma de separar visualmente y estructurar el contenido que se encuentra en la parte inferior de una tabla.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
     {
       'tag': 'tr',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/tr',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir una fila en una tabla**. Cada fila de una tabla HTML debe estar contenida dentro de un elemento **<tr>**. Las celdas de datos dentro de esa fila se definen utilizando elementos **<td>** o **<th>**.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
     {
       'tag': 'th',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/th',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir un encabezado de columna o fila en una tabla**. El encabezado de columna se coloca dentro de un elemento **<thead>**, mientras que el encabezado de fila se coloca dentro de un elemento **<th>** directamente dentro de un elemento **<tr>**. El uso de **<th>** en lugar de **<td>** proporciona un estilo y formato visualmente diferente para resaltar los encabezados en la tabla.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
     {
       'tag': 'td',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/td',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir una celda de datos dentro de una tabla**. Cada celda de datos debe estar contenida dentro de un elemento **<td>**. Las celdas se organizan en filas utilizando el elemento **<tr>**.',
+      'codeHTML': `<table>
+    <!-- encabezado -->
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+        </tr>
+    </thead>
+    <!-- cuerpo -->
+    <tbody>
+        <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+      <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+      </tr>
+    </tbody>
+    <!-- footer -->
+    <tfoot>
+        <tr>
+            <td>Pie de tabla 1</td>
+            <td>Pie de tabla 2</td>
+            <td>Pie de tabla 3</td>
+        </tr>
+    </tfoot>
+</table>
+`,
+      'codeCSS': `  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead {
+    font-weight: bold;
+}`,
     },
 
     {
