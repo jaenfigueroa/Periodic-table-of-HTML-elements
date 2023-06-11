@@ -1,8 +1,8 @@
 <div align='center'>
 
-  # Periodic table of HTML elements
+# Tabla Periódica de Elementos HTML
 
-  The 'Periodic Table of HTML Elements' is a visually appealing and organized representation of the fundamental elements that constitute the HTML (HyperText Markup Language) markup language. Similar to the periodic table of chemical elements, this specific version of HTML classifies and systematically presents the key components used to construct and shape web pages.
+La Tabla Periódica de Elementos HTML ofrece una clasificación clara de los elementos según su función utilizando colores distintivos para una fácil identificación. Cada elemento viene con una descripción concisa, ejemplos de código y previsualizacion. Ideal para desarrolladores web en busca de una referencia rápida y práctica. Además, incluye una sección dedicada a los elementos deprecados, proporcionando información sobre por qué se desaconseja su uso y alternativas actualizadas.
 
   <div>
     <img src="https://img.shields.io/github/stars/jaenfigueroa/Periodic-table-of-HTML-elements-new">
@@ -13,12 +13,12 @@
 
 </div>
 
-## 💡 Preview
+## 💡 Vista previa
 
-![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685467979/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5174-2023-05-30-12_31_28_1_dwscsu.png)
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1686512885/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5173-2023-06-11-14_46_45_1_eio8vc.png)
 
-![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1685576524/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-05-31_184100_1_pvgu9l.png)
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1686512988/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-06-11_144851_1_tlm7un.png)
 
-## 🧪 Technologies
+## 🧪 Tecnologías usadas
 
 <img src="https://skillicons.dev/icons?i=vite,react,typescript,sass,javascript,html"/>
