@@ -2066,76 +2066,97 @@ thead {
       'tag': 'map',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/map',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza en HTML junto con el elemento **<area>** para **crear mapas de imágenes interactivos**. Un mapa de imagen permite dividir una imagen en **áreas sensibles al clic** y **asignar acciones** o enlaces específicos a cada área.',
+      'codeHTML': `<img src="mapa.jpg" alt="Mapa interactivo" usemap="#nombre_mapa">
+
+<map name="nombre_mapa">
+    <area shape="rect" coords="100,100,200,200" href="pagina1.html" alt="Área 1">
+    <area shape="circle" coords="300,150,50" href="pagina2.html" alt="Área 2">
+</map>
+`,
     },
     {
       'tag': 'area',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/area',
-      'description': 'Sirve para crear las distintas secciones en las que se puede dividir un mapas de imágenes en el cliente.',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza junto con el elemento **<map>** para crear **áreas interactivas en una imagen**. Estas áreas se pueden definir como enlaces o como áreas sensibles al clic que activan acciones o eventos específicos cuando se hace clic en ellas.',
+      'codeHTML': `<img src="mapa.jpg" alt="Mapa interactivo" usemap="#mapa">
+
+<map name="mapa">
+    <area shape="rect" coords="100,100,200,200" href="pagina1.html" alt="Área 1">
+    <area shape="circle" coords="300,150,50" href="pagina2.html" alt="Área 2">
+</map>
+`,
     },
     {
       'tag': 'object',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/object',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
-    },
+      'description': 'Se utiliza para **insertar objetos externos en una página web, como imágenes, videos, archivos de audio, documentos PDF, contenido Flash**, entre otros. Su uso más común es la incorporación de contenido multimedia en una página web.',
+      'codeHTML': `<object data="url_del_archivo" type="tipo_de_contenido">
 
+<object data="archivo.pdf" type="application/pdf">`,
+    },
     {
       'tag': 'param',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/param',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para proporcionar parámetros adicionales a un objeto incrustado dentro de un elemento **<object>**. Estos parámetros se utilizan principalmente cuando se **incrusta contenido multimedia, como videos o animaciones Flash**. El elemento **<param>** se coloca dentro de la etiqueta **<object>** y no tiene una etiqueta de cierre.',
+      'codeHTML': `<object data="archivo.swf" type="application/x-shockwave-flash">
+    <param name="movie" value="archivo.swf">
+    <param name="loop" value="true">
+    <param name="bgcolor" value="#FFFFFF">
+    <!-- Otros parámetros -->
+</object>
+`,
     },
     {
       'tag': 'iframe',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **incrustar contenido de otro origen o página web dentro de una página principal**. El contenido incrustado se muestra en un marco separado dentro de la página principal. Esto es útil cuando deseas mostrar contenido externo, como una página web externa o un mapa interactivo, dentro de tu propia página. Recuerda que al usar <iframe> para incrustar contenido externo, debes asegurarte de tener permiso para hacerlo y respetar las políticas y términos del sitio web cuyo contenido estás incrustando.',
+      'codeHTML': `<iframe
+  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVESRoficial&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
+  ></iframe>
+      `,
     },
-
-
     {
       'tag': 'canvas',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/canvas',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **dibujar gráficos, imágenes, animaciones y otros elementos visuales en tiempo real** mediante JavaScript. Proporciona una zona rectangular en la cual puedes manipular píxeles y crear contenido visual de manera programática.',
+      'codeHTML': '<canvas id="myCanvas" width="200" height="200"></canvas>',
+      'codeJS': `const canvas = document.getElementById('myCanvas');
+const context = canvas.getContext('2d');
+
+context.fillStyle = 'red';
+context.fillRect(50, 50, 100, 100);
+`,
     },
     {
       'tag': 'svg',
       'group': 'Elems. de contenido incrustado',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/svg',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agregar gráficos vectoriales escalables** a tu página web. SVG es un formato de imagen basado en XML que permite crear gráficos escalables y animados utilizando elementos y atributos vectoriales.',
+      'codeHTML': `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="50" fill="red" />
+</svg>
+
+`,
     },
     {
       'tag': 'math',
       'group': 'Elems. para MathML',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/math',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se usa para mostrar **fórmulas matemáticas** o **notación matemática** en HTML, puedes utilizar el elemento **<math>**, junto con el estándar MathML (Mathematical Markup Language).',
+      'codeHTML': `<math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mfrac>
+        <mi>a</mi>
+        <mi>b</mi>
+    </mfrac>
+</math>
+`,
     },
-
-    /* NUEVOS */
-    /* NUEVOS */
-    /* NUEVOS */
-    /* NUEVOS */
-    /* NUEVOS */
-
   ],
   'distribution': [
     'Elemento root',
