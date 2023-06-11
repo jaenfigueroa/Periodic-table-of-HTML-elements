@@ -1970,6 +1970,7 @@ thead {
       'codeHTML': `<picture>
     <source srcset="imagen.webp" type="image/webp">
     <source srcset="imagen.jpg" type="image/jpeg">
+    <!-- si ninguna de arriba es compatible, esta sera por defecto -->
     <img src="imagen.jpg" alt="Texto alternativo">
 </picture>
 `,
@@ -1979,68 +1980,87 @@ thead {
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/audio',
       'description': 'Se utiliza para **insertar archivos de audio en una página web**. Permite reproducir audio directamente en el navegador sin necesidad de complementos o reproductores externos. Recuerda que el soporte para diferentes formatos de audio varía entre los navegadores, por lo que es recomendable proporcionar el audio en diferentes formatos (como MP3, OGG o WAV) utilizando elementos **<source>** dentro del elemento **<audio>**. De esta manera, el navegador seleccionará automáticamente el formato compatible.',
-      'codeHTML': `<audio src="ruta_del_audio.mp3" controls>
+      'codeHTML': `<!-- primera forma -->
+<audio src="ruta_del_audio.mp3" controls>
     Tu navegador no soporta el elemento de audio.
 </audio>
 
-
+<!-- seguda forma - indicando diferentes formatos - mejor forma-->
 <audio controls>
     <source src="audio.mp3" type="audio/mpeg">
     <source src="audio.ogg" type="audio/ogg">
     Tu navegador no soporta el elemento de audio.
 </audio>
-
 `,
     },
     {
       'tag': 'video',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/video',
-      'description': 'Se utiliza para **insertar y reproducir archivos de video** en una página web. Permite mostrar contenido de video directamente en el navegador sin necesidad de complementos o reproductores externos. El soporte para diferentes formatos de video varía entre los navegadores, por lo que es recomendable proporcionar el video en diferentes formatos (como MP4, WebM o OGG) utilizando elementos <source> dentro del elemento <video>. De esta manera, el navegador seleccionará automáticamente el formato compatible.',
-      'codeHTML': `<video src="ruta_del_video.mp4" controls>
+      'description': 'Se utiliza para **insertar y reproducir archivos de video** en una página web. Permite mostrar contenido de video directamente en el navegador sin necesidad de complementos o reproductores externos. El soporte para diferentes formatos de video varía entre los navegadores, por lo que **es recomendable proporcionar el video en diferentes formatos** (como MP4, WebM o OGG) utilizando elementos <source> dentro del elemento <video>. De esta manera, el navegador seleccionará automáticamente el formato compatible.',
+      'codeHTML': `<!-- primera forma -->
+<video src="ruta_del_video.mp4" controls>
   Tu navegador no soporta el elemento de video.
 </video>
 
+<!-- segunda forma - indicando diferentes formatos - mejor forma -->
 <video controls>
   <source src="video.mp4" type="video/mp4">
   <source src="video.webm" type="video/webm">
   Tu navegador no soporta el elemento de video.
 </video>
-
 `,
     },
     {
       'tag': 'source',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/source',
-      'description': '',
-      'codeHTML': '',
+      'description': '**Se utiliza dentro del elemento <video> o <audio> para especificar las fuentes de medios**, como archivos de video o audio, que el navegador puede utilizar. Es importante proporcionar múltiples fuentes en diferentes formatos para asegurarse de que el navegador pueda reproducir el video utilizando el formato que sea compatible. Si el navegador no puede reproducir ninguno de los formatos especificados, se mostrará el texto "Tu navegador no admite el elemento de video" como contenido alternativo.',
+      'codeHTML': `<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Tu navegador no admite el elemento de video.
+</video>
+`,
       'codeJS': '',
     },
     {
       'tag': 'track',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/track',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza dentro del elemento <video> o <audio> **para proporcionar subtítulos o descripciones de audio o video**. El atributo **src** del elemento <track> especifica la URL del archivo de subtítulos. El atributo **kind** indica el tipo de contenido de la pista, en este caso, "subtitles" para subtítulos. El atributo **srclang** especifica el idioma de los subtítulos, y el atributo **label** proporciona una etiqueta descriptiva para los subtítulos en ese idioma.',
+      'codeHTML': `<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+    Tu navegador no admite el elemento de video.
+</video>
+`,
     },
-
     {
       'tag': 'figure',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/figure',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar contenido relacionado, generalmente una imagen y su correspondiente leyenda o descripción**. es especialmente útil cuando se desea asociar una imagen con una descripción o leyenda específica. Ayuda a mejorar la estructura semántica del documento HTML y también permite que los navegadores y asistentes de lectura comprendan mejor la relación entre la imagen y su contenido descriptivo.',
+      'codeHTML': `<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+<figure>
+    <img src="data:image/jpeg;base64,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" alt="Descripción de la imagen">
+    <figcaption>La famosa pintura de la Mona Lisa.</figcaption>
+</figure>
+
+<p>No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
+`,
     },
     {
       'tag': 'figcaption',
       'group': 'Elems. multimedia',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/caption',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir una leyenda o descripción para el contenido dentro de un elemento <figure>**.',
+      'codeHTML': `<figure>
+    <img alt="Descripción de la imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_bYR60wuxM4ekgzQ2Kul1DIhuHtkW6Rppw&usqp=CAU" >
+    <figcaption>Leyenda de la imagen</figcaption>
+</figure>
+`,
     },
     {
       'tag': 'map',
@@ -2136,5 +2156,6 @@ thead {
     'Elems. multimedia',
     'Elems. de contenido incrustado',
     'Elems. para MathML',
+    'Elems. deprecados',
   ],
 }

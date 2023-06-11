@@ -34,5 +34,6 @@ type VariantGroup =
   'Elems. para anotaciones ruby' |
   'Elems. de direccion' |
   'Elems. de salto de linea' |
-  'Elems. para MathML'
+  'Elems. para MathML' |
+  'Elems. deprecados'
 

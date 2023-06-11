@@ -33,6 +33,7 @@ export const Element = ({ element }: Props) => {
     'element--yellow2': group === 'Elems. de direccion',
     'element--green4': group === 'Elems. de salto de linea',
     'element--blue3': group === 'Elems. para MathML',
+    'element--gray-dark': group === 'Elems. deprecados',
   })
 
   return (
