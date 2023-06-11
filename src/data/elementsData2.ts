@@ -998,104 +998,372 @@ Cuando el usuario hace clic en el botón de imagen **<input type="image"/>**, se
 </ol>
 
 `,
-      'codeJS': '',
     },
     {
       'tag': 'li',
       'group': 'Elems. de lista',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/li',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
-    },
+      'description': 'Se utiliza para **crear un elemento de lista**, ya sea en una lista ordenada **<ol>** o en una lista desordenada **<ul>**. Recuerda que la etiqueta **<li>** es obligatoria dentro de las listas ordenadas y desordenadas. Sin ella, los elementos de la lista no se representarán correctamente.',
+      'codeHTML': `<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+</ul>
 
+<ol>
+    <li>Corta las verduras en trozos pequeños.</li>
+    <li>Calienta una sartén a fuego medio.</li>
+    <li>Agrega aceite y espera a que se caliente.</li>
+    <li>Añade las verduras a la sartén y saltea durante 5 minutos.</li>
+    <li>Condimenta con sal y pimienta al gusto.</li>
+</ol>
+`,
+    },
     {
       'tag': 'dl',
       'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dl',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear una lista de definición**, que consiste en términos y sus correspondientes definiciones.',
+      'codeHTML': `<dl>
+    <dt>HTML</dt>
+    <dd>Lenguaje de marcado para crear páginas web.</dd>
+
+    <dt>CSS</dt>
+    <dd>Lenguaje de hojas de estilo para dar estilo a las páginas web.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Lenguaje de programación para hacer que las páginas web sean interactivas.</dd>
+</dl>
+`,
     },
     {
       'tag': 'dt',
       'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dt',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir un término o nombre en una lista de definición <dl>**. Esta etiqueta se coloca dentro de la etiqueta <dl> y se utiliza en combinación con la etiqueta <dd> para especificar la definición o descripción correspondiente al término.',
+      'codeHTML': `<dl>
+    <dt>HTML</dt>
+    <dd>Lenguaje de marcado para crear páginas web.</dd>
+
+    <dt>CSS</dt>
+    <dd>Lenguaje de hojas de estilo para dar estilo a las páginas web.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Lenguaje de programación para hacer que las páginas web sean interactivas.</dd>
+</dl>
+`,
     },
     {
       'tag': 'dd',
       'group': 'Elems. de lista de definiciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dd',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **especificar la definición o descripción de un término en una lista de definición <dl>**. Esta etiqueta se coloca dentro de la etiqueta <dl> y se utiliza en combinación con la etiqueta <dt> que define el término correspondiente.',
+      'codeHTML': `<dl>
+    <dt>HTML</dt>
+    <dd>Lenguaje de marcado para crear páginas web.</dd>
+
+    <dt>CSS</dt>
+    <dd>Lenguaje de hojas de estilo para dar estilo a las páginas web.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Lenguaje de programación para hacer que las páginas web sean interactivas.</dd>
+</dl>
+`,
     },
     {
       'tag': 'div',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/div',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza como un **contenedor genérico para agrupar elementos y aplicar estilos o manipular el contenido de manera conjunta**. Es una etiqueta de bloque que no tiene ningún significado o impacto semántico específico, pero es ampliamente utilizada en la construcción de estructuras y diseños en HTML y CSS.',
+      'codeHTML': `<div>
+    <h1>Título de la página</h1>
+    <p>Este es un párrafo de texto.</p>
+    <img src="data:image/jpeg;base64,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" alt="Descripción de la imagen">
+</div>
+`,
     },
     {
       'tag': 'header',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/header',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'se utiliza para **definir el encabezado o cabecera de una sección o página web**. Por lo general, se coloca al inicio del documento y contiene elementos como el logotipo, el título principal, la navegación y otros elementos relacionados con el encabezado de la página.',
+      'codeHTML': `<header>
+    <h1>Nombre de la página</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+`,
+      'codeCSS': `header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}`,
     },
     {
       'tag': 'nav',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/nav',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
-    },
-    {
-      'tag': 'aside',
-      'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/aside',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **definir una sección de navegación en una página web**. Se utiliza para agrupar enlaces u otros elementos de navegación relacionados que permiten a los usuarios moverse dentro del sitio web.',
+      'codeHTML': `<nav>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Acerca</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+`,
     },
     {
       'tag': 'main',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/main',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **marcar el contenido principal de una página web**. Representa la sección principal de un documento y normalmente contiene el contenido central y relevante para la página.',
+      'codeHTML': `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+</head>
+<body>
+    <header>
+        <!-- Encabezado de la página -->
+    </header>
+
+    <main>
+        <!-- Contenido principal de la página -->
+        <h1>Título principal</h1>
+        <p>Este es el contenido principal de la página.</p>
+        <img src="imagen.jpg" alt="Descripción de la imagen">
+    </main>
+
+    <footer>
+        <!-- Pie de página -->
+    </footer>
+</body>
+</html>
+`,
     },
     {
       'tag': 'section',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/section',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **agrupar contenido relacionado en una página web**. Representa una sección autónoma y temáticamente coherente dentro de un documento.',
+      'codeHTML': `<section>
+    <h2>Introducción</h2>
+    <p>Bienvenido a nuestro sitio web. Aquí encontrarás información sobre nuestro negocio y los servicios que ofrecemos.</p>
+</section>
+
+<section>
+    <h2>Nuestros Servicios</h2>
+    <ul>
+        <li>Servicio 1</li>
+        <li>Servicio 2</li>
+        <li>Servicio 3</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Testimonios</h2>
+    <blockquote>
+        <p>Excelente servicio al cliente. Estoy muy satisfecho con los resultados obtenidos.</p>
+        <cite>Cliente 1</cite>
+    </blockquote>
+
+    <blockquote>
+        <p>El equipo de trabajo es altamente profesional y entregó el proyecto a tiempo.</p>
+        <cite>Cliente 2</cite>
+    </blockquote>
+</section>
+
+`,
     },
     {
       'tag': 'article',
       'group': 'Elems. para secciones',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/article',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **representar un contenido independiente y autónomo en una página web**. Se utiliza para agrupar contenido que **tiene sentido por sí mismo** y que **puede ser distribuido o reutilizado de forma independiente en otros contextos**.',
+      'codeHTML': `<article>
+  <header>
+      <h2>Receta de Pastel de Chocolate</h2>
+      <p>Una deliciosa receta para disfrutar en ocasiones especiales.</p>
+  </header>
+
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QBURXhpZgAASUkqAAgAAAACAA4BAgAcAAAAJgAAAJiCAgAKAAAAQgAAAAAAAABDaG9wcGVkIGNob2NvbGF0ZSB3aXRoIGNvY29hZWxpa2F0c2V2Yf/tAHhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAAXBwCUAAKZWxpa2F0c2V2YRwCeAAcQ2hvcHBlZCBjaG9jb2xhdGUgd2l0aCBjb2NvYRwCdAAKZWxpa2F0c2V2YRwCbgAYR2V0dHkgSW1hZ2VzL2lTdG9ja3Bob3Rv/+EFNmh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+Cgk8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgoJCTxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6SXB0YzR4bXBDb3JlPSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wQ29yZS8xLjAveG1sbnMvIiAgIHhtbG5zOkdldHR5SW1hZ2VzR0lGVD0iaHR0cDovL3htcC5nZXR0eWltYWdlcy5jb20vZ2lmdC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBsdXM9Imh0dHA6Ly9ucy51c2VwbHVzLm9yZy9sZGYveG1wLzEuMC8iICB4bWxuczppcHRjRXh0PSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wRXh0LzIwMDgtMDItMjkvIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiBkYzpSaWdodHM9ImVsaWthdHNldmEiIHBob3Rvc2hvcDpDcmVkaXQ9IkdldHR5IEltYWdlcy9pU3RvY2tw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" alt="Imagen del pastel de chocolate">
+
+  <p>El pastel de chocolate es un clásico irresistible que a todos les encanta. Aquí tienes la receta para prepararlo en casa:</p>
+
+  <section>
+      <h3>Ingredientes</h3>
+      <ul>
+          <li>200g de chocolate negro</li>
+          <li>200g de mantequilla</li>
+          <li>200g de azúcar</li>
+          <li>4 huevos</li>
+          <li>150g de harina</li>
+          <li>1 cucharadita de esencia de vainilla</li>
+          <li>1 pizca de sal</li>
+      </ul>
+  </section>
+
+    <section>
+        <h3>Preparación</h3>
+        <ol>
+            <li>Derrite el chocolate y la mantequilla juntos en baño maría.</li>
+            <li>En un recipiente aparte, bate los huevos con el azúcar hasta obtener una mezcla espumosa.</li>
+            <li>Agrega la harina tamizada, la esencia de vainilla y la sal a la mezcla de huevos y azúcar. Revuelve bien.</li>
+            <li>Vierte la mezcla de chocolate y mantequilla derretida en la masa y mezcla hasta obtener una mezcla homogénea.</li>
+            <li>Vierte la masa en un molde para pastel previamente engrasado.</li>
+            <li>Hornea a 180°C durante aproximadamente 30-35 minutos, o hasta que al insertar un palillo en el centro del pastel, este salga limpio.</li>
+            <li>Deja enfriar antes de desmoldar y decorar al gusto.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <small>Autor: Ana Rodríguez</small>
+        <time datetime="2023-06-10">10 de junio de 2023</time>
+    </footer>
+</article>
+`,
     },
     {
-      'tag': 'footer',
+      'tag': 'aside',
       'group': 'Elems. para secciones',
-      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/aside',
+      'description': 'Se utiliza para **representar un contenido relacionado o complementario al contenido principal de la página**. Por lo general, se coloca junto al contenido principal, pero puede ser independiente de él.',
+      'codeHTML': `<main>
+    <article>
+        <h1>Título del artículo</h1>
+        <p>Contenido principal del artículo.</p>
+    </article>
+
+    <aside>
+        <h2>Anuncios</h2>
+        <p>Contenido relacionado o anuncios aquí.</p>
+    </aside>
+</main>
+`,
+      codeCSS: `/* Estilos para el contenido principal */
+main {
+  display: flex;
+  gap: 20px;
+}
+
+article {
+  flex: 2;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Estilos para el contenido complementario */
+aside {
+  flex: 1;
+  background-color: #ebebeb;
+  padding: 20px;
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+  color: #333;
+}
+
+/* Estilos para los párrafos */
+p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Estilos para los anuncios */
+aside h2 {
+  color: #ff0000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+aside p {
+  font-size: 14px;
+}
+`,
+    },
+    {
+      tag: 'footer',
+      group: 'Elems. para secciones',
+      url: 'https://developer.mozilla.org/en/docs/Web/HTML/Element/footer',
+      description: 'Se utiliza para **representar la sección de pie de página de un documento HTML**. Se coloca típicamente al final del contenido principal de la página y contiene información de contacto, enlaces adicionales, derechos de autor u otros elementos relacionados con el pie de página.',
+      codeHTML: `<footer>
+    <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about">Acerca de</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>
+    </nav>
+</footer>
+`,
+      codeCSS: `/* Estilos generales del footer */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  color: #666;
+  text-align: center;
+}
+
+/* Estilos para el párrafo de derechos de autor */
+footer p {
+  font-size: 14px;
+}
+
+/* Estilos para el menú de navegación */
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+footer nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+`,
     },
     {
       'tag': 'details',
