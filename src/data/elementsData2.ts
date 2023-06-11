@@ -829,7 +829,7 @@ Cuando el usuario hace clic en el botón de imagen **<input type="image"/>**, se
       'tag': 'select',
       'group': 'Elems. de formulario',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/select',
-      'description': `Se utiliza para crear una lista desplegable de opciones seleccionables.
+      'description': `Se utiliza para **crear una lista desplegable de opciones seleccionables**.
 
 **name:** Especifica el nombre del elemento de selección. para cuando se envía el formulario.
 
@@ -1369,48 +1369,171 @@ footer nav a:hover {
       'tag': 'details',
       'group': 'Elems. de interacción',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/details',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear un elemento desplegable que muestra u oculta contenido adicional cuando el usuario interactúa con él**. Puede contener un elemento **<summary>** que sirve como encabezado o título del contenido desplegable.',
+      'codeHTML': `<details>
+    <summary>Información adicional</summary>
+    <p>Este es el contenido adicional que se mostrará u ocultará.</p>
+</details>
+`,
     },
     {
       'tag': 'summary',
       'group': 'Elems. de interacción',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/summary',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza dentro de la etiqueta <details> **para proporcionar un encabezado o título para el contenido desplegable**. El texto o contenido dentro de <summary> se mostrará como el encabezado visible antes de que el usuario interactúe con el elemento desplegable.',
+      'codeHTML': `<details>
+    <summary>Mostrar más información</summary>
+    <p>Este es el contenido adicional que se mostrará u ocultará.</p>
+</details>
+`,
     },
     {
       'tag': 'dialog',
       'group': 'Elems. de interacción',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/dialog',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear un cuadro de diálogo o ventana emergente en una página web**. Puede contener contenido HTML como texto, formularios u otros elementos interactivos. A través del uso de JavaScript, se puede controlar la apertura, cierre y manipulación del cuadro de diálogo.',
+      'codeHTML': `<button onclick="openDialog()">Abrir cuadro de diálogo</button>
+
+<dialog id="myDialog">
+  <h2>Título del cuadro de diálogo</h2>
+  <p>Contenido del cuadro de diálogo.</p>
+  <button onclick="closeDialog()">Cerrar</button>
+</dialog>`,
+      'codeJS': `const openDialog = () => {
+    let dialog = document.getElementById('myDialog');
+    dialog.showModal();
+}
+
+const closeDialog = () => {
+    let dialog = document.getElementById('myDialog');
+    dialog.close();
+}`,
     },
     {
       'tag': 'table',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/table',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza para **crear tablas en HTML**. Las tablas se componen de filas y columnas, y se utilizan para organizar y mostrar datos de manera tabular.',
+      'codeHTML': `<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>País</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td>25</td>
+        <td>Estados Unidos</td>
+    </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>30</td>
+        <td>Canadá</td>
+    </tr>
+</table>
+`,
+      codeCSS: `table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}`,
     },
     {
       'tag': 'caption',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/caption',
-      'description': '',
-      'codeHTML': '',
-      'codeJS': '',
+      'description': 'Se utiliza en una estructura de tabla **para proporcionar un título o descripción a la tabla**. Se coloca dentro del elemento **<table>** y se coloca antes de las filas de datos.',
+      'codeHTML': `<table>
+    <caption>Título de la tabla</caption>
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>País</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td>25</td>
+        <td>Estados Unidos</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td>30</td>
+        <td>Canadá</td>
+    </tr>
+</table>
+`,
+      'codeCSS': `table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}`,
     },
     {
       'tag': 'colgroup',
       'group': 'Elems. de tabla',
       'url': 'https://developer.mozilla.org/en/docs/Web/HTML/Element/colgroup',
-      'description': '',
-      'codeHTML': '',
+      'description': 'Se utiliza en una estructura de tabla para **agrupar y aplicar estilos a una o más columnas de la tabla**. Se coloca dentro del elemento **<table>** y puede contener una o más etiquetas **<col>** como hijos.',
+      'codeHTML': `<table>
+    <colgroup>
+        <col style="background-color: yellow;">
+        <col span="2" style="background-color: lightblue;">
+        <col span="1" style="background-color: pink;">
+    </colgroup>
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>País</th>
+        <th>Sexo</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td>25</td>
+        <td>Estados Unidos</td>
+        <td>Masculino</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td>30</td>
+        <td>Canadá</td>
+        <td>Fenenino</td>
+    </tr>
+</table>
+`,
       'codeJS': '',
     },
     {

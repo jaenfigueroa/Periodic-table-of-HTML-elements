@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: max-content;
+  width: 250px;
 
   &__name {
     font-weight: 350;
@@ -14,7 +16,6 @@
   &__color {
     width: 20px;
     height: 20px;
-    // border-radius: .5rem;
 
     @include m.variantColors
   }

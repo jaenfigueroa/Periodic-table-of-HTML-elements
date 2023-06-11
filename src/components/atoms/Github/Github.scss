@@ -1,35 +1,43 @@
 .github {
-  outline: 1px solid #d1d4d7;
-  position: absolute;
-  top: 15px;
-  right: 15px;
   color: white;
   display: flex;
   align-items: center;
   border-radius: .3rem;
+  height: max-content;
+  width: max-content;
+  background: linear-gradient(#f7fcff 60%, #d0d7db);
   overflow: hidden;
 
-  div {
+  &__box {
     border: 1px solid #ced2d5;
     display: flex;
     align-items: center;
     gap: .6rem;
-    padding: .3rem .7rem;
-    color: black;
-    background: linear-gradient(#f7fcff 60%, #d0d7db);
+    padding: .5rem .7rem;
+
+    &:hover {
+      background: linear-gradient(#eef3f6 60%, #d0d7db);
+    }
+
+    i {
+      font-size: 1.4rem;
+      color: black;
+    }
 
     p {
-      font-size: 1.4rem;
-      padding: 0;
-    }
-  }
-
-  &__box-1 {
-    i {
-      animation: girar 1.5s ease-out infinite;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      color: black;
     }
 
+    &--animate {
+      i.fa-star {
+        animation: girar 1.5s linear infinite;
+      }
+
+      i.fa-code-branch {
+        animation: tambalear .22s linear infinite alternate-reverse;
+      }
+    }
   }
 }
 
@@ -40,5 +48,15 @@
 
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+@keyframes tambalear {
+  0% {
+    transform: rotateZ(-25deg);
+  }
+
+  100% {
+    transform: rotateZ(15deg);
   }
 }

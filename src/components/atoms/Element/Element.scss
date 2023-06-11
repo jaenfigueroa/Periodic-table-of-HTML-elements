@@ -8,17 +8,15 @@
   transition: 100ms;
   outline: 1px solid rgb(0, 0, 0);
   position: relative;
-  /* PARA PONER UN GUION AL FIANL SI NO CABE LA PALABRA */
+  /* PARA PONER UN GUION AL FINAL SI NO CABE LA PALABRA */
   hyphens: auto;
 
   p {
     text-align: center;
-    // font-size: clamp(1rem, 1.1vw, 2rem);
-    font-size: clamp(1rem, 1.13vw, 2rem);
-    // font-size: clamp(1rem, 1.15vw, 2rem);
     line-height: 1.7rem;
-
-    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: .8rem;
+    line-height: .75rem;
+    font-size: .8rem;
   }
 
   span {
@@ -39,6 +37,15 @@
     font-size: 1.2rem;
   }
 
+  span,
+  h3 {
+    color: black;
+    line-height: .38rem;
+    font-size: .4rem;
+    bottom: .3rem;
+    color: transparent;
+  }
+
   &:hover {
     box-shadow: 0 0 1em rgba(0, 0, 0, .8);
     z-index: 1;
@@ -54,19 +61,138 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: .7rem;
     background: #000;
     color: white;
     border: 1px solid #000;
     border-left: 0;
     border-top: 0;
-    padding: .4rem .6rem .6rem .4rem;
-    border-radius: 0 0 1.1rem 0;
-    font-size: .6rem;
+
+    font-size: .3rem;
+    padding: .19rem .25rem .25rem .16rem;
+    border-radius: 0 0 .65rem 0;
 
     &:hover {
       background: white;
       color: black;
+    }
+  }
+
+  @media (min-width: 640px) {
+    i {
+      font-size: .35rem;
+      padding: .2rem .3rem .3rem .2rem;
+      border-radius: 0 0 .65rem 0;
+    }
+
+    p {
+      line-height: .85rem;
+      font-size: .9rem;
+    }
+
+    span,
+    h3 {
+      color: black;
+      line-height: .38rem;
+      font-size: .45rem;
+      bottom: .3rem;
+      color: transparent;
+    }
+  }
+
+  @media (min-width: 740px) {
+    i {
+      font-size: .5rem;
+      padding: .3rem .4rem .4rem .3rem;
+      border-radius: 0 0 .9rem 0;
+    }
+
+    p {
+      line-height: .9rem;
+      font-size: 1.1rem;
+    }
+
+    span,
+    h3 {
+      color: black;
+      line-height: .45rem;
+      font-size: .6rem;
+      bottom: .3rem;
+      color: transparent;
+    }
+  }
+
+  @media (min-width: 825px) {
+    p {
+      line-height: 1rem;
+      font-size: 1.2rem;
+    }
+
+    span,
+    h3 {
+      color: black;
+      line-height: .65rem;
+      font-size: .6rem;
+      bottom: .3rem;
+      color: transparent;
+    }
+  }
+
+  @media (min-width:1042px) {
+    i {
+      font-size: .7rem;
+      padding: .35rem .55rem .55rem .35rem;
+      border-radius: 0 0 1.1rem 0;
+    }
+
+    p {
+      line-height: 1.4rem;
+      font-size: 1.4rem;
+    }
+
+    span,
+    h3 {
+      color: black;
+      line-height: .75rem;
+      font-size: .7rem;
+      bottom: .3rem;
+      color: transparent;
+    }
+  }
+
+  @media (min-width:1100px) {
+    i {
+      font-size: .7rem;
+      padding: .35rem .55rem .55rem .35rem;
+      border-radius: 0 0 1.1rem 0;
+    }
+
+    p {
+      line-height: 1.4rem;
+      font-size: 1.5rem;
+    }
+
+    span,
+    h3 {
+      color: black;
+      line-height: .8rem;
+      font-size: .7rem;
+      bottom: .3rem;
+      color: transparent;
+    }
+  }
+
+  @media (min-width:1100px) {
+    p {
+      line-height: 1.6rem;
+      font-size: 1.6rem;
+    }
+
+    span,
+    h3 {
+      line-height: .8rem;
+      font-size: .8rem;
+      bottom: .3rem;
+      color: transparent;
     }
   }
 

@@ -2,4 +2,12 @@
   display: flex;
   flex-direction: column;
   background: radial-gradient(#585861, #262734, #1b1c25);
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  gap: 8rem;
 }
