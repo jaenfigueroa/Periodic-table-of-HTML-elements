@@ -8,8 +8,8 @@
   gap: 1rem;
 
   &__logo {
-    font-size: clamp(1rem, 3vw, 2.2rem);
+    font-size: clamp(1rem, 3vw, 2.4rem);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
   }
 }

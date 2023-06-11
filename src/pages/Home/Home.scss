@@ -8,12 +8,15 @@
 .table-container {
   display: flex;
   flex-direction: column;
-  // gap: 6rem;
-  // gap: 8rem;
   gap: 4rem;
 }
 
 summary {
-  color: rgb(186, 186, 186);
+  color: rgba(255, 255, 255, 0.9);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-deprecados {
+  // border: 1px solid red;
+  padding: 2rem 0 6rem;
 }

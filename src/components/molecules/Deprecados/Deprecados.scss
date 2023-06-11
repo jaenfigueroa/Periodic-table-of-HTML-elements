@@ -1,0 +1,26 @@
+.deprecados {
+  // border: 2px dashed red;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  div {
+
+    /* FILA 1 */
+    @for $i from 1 through 14 {
+      &:nth-child(#{$i}) {
+        grid-row: 1;
+        grid-column: $i;
+      }
+    }
+
+    /* FILA 2 */
+    @for $i from 15 through 28 {
+      &:nth-child(#{$i}) {
+        grid-row: 2;
+        grid-column: $i - 14;
+        // background: red;
+      }
+    }
+  }
+}

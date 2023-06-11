@@ -2156,5 +2156,6 @@ thead {
     'Elems. multimedia',
     'Elems. de contenido incrustado',
     'Elems. para MathML',
+    'Elems. deprecados',
   ],
 }

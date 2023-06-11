@@ -26,6 +26,7 @@ export const Item = ({ text}: Props) => {
     'item__color--yellow2': text === 'Elems. de direccion',
     'item__color--green4': text === 'Elems. de salto de linea',
     'item__color--blue3': text === 'Elems. para MathML',
+    'item__color--gray-dark': text === 'Elems. deprecados',
   })
 
   return (
