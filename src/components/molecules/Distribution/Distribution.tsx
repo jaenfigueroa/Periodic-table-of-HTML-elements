@@ -10,7 +10,9 @@ export const Distribution = ({distributionContent}:Props) => {
     <div className='distribution'>
       {
         distributionContent.map((element, index) => (
-          <Item text={element} key={index} />
+          <div key={index} className={`distribution__item${index + 1}`}>
+            <Item text={element}/>
+          </div>
         ))
       }
     </div>
