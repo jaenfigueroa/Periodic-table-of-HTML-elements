@@ -1,4 +1,4 @@
-import { Item } from '../../atoms/Item/Item'
+import { Item } from '../Item/Item'
 import './Distribution.scss'
 
 type Props = {

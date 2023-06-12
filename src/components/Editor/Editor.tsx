@@ -4,9 +4,9 @@ import CodeMirror from '@uiw/react-codemirror'
 import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
-import { themeHTML } from '../../../themes/themeHTML'
-import { themeCSS } from '../../../themes/themeCSS'
-import { themeJS } from '../../../themes/themeJS'
+import { themeHTML } from '../../themes/themeHTML'
+import { themeCSS } from '../../themes/themeCSS'
+import { themeJS } from '../../themes/themeJS'
 
 type Props = {
   htmlDefault: string

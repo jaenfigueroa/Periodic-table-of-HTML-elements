@@ -1,6 +1,6 @@
 .info {
   background: white;
-  padding: 1rem 2rem 2rem;
+  padding: 1.5rem;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -13,13 +13,22 @@
     display: none;
   }
 
-  &__button-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    border: none;
+  /* HEADER */
+  &__header {
+    // border: 1px solid red;
     display: flex;
     justify-content: space-between;
+    // align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__button-close {
+    border: none;
+    display: flex;
+    // background: green;
+    justify-content: end;
     background: transparent;
 
     i {
@@ -34,13 +43,14 @@
   }
 
   &__title {
-    font-size: 3rem;
     font-size: 3.2rem;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // background: yellow;
   }
 
+  /* DESCRIPCION */
   &__description {
     padding: 1.5rem;
     border-radius: .5rem;
@@ -58,16 +68,10 @@
     }
 
     strong {
-      // color: rgb(118, 80, 255);
-      // color: rgb(65, 120, 63);
-      // color: rgb(58, 106, 56);
       color: rgb(36, 66, 35);
-      // font-weight: 600;
       text-decoration: underline;
     }
   }
-
-
 
   @media (min-widtH: 460px) {
     min-height: auto;

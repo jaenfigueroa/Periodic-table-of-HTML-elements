@@ -1,6 +1,6 @@
 import { Data } from '../types/periodicTable'
 
-export const elementsData2: Data = {
+export const ELEMENTS_EN: Data = {
   'title': 'Tabla periodica de elementos HTML',
   'elements': [
     {
