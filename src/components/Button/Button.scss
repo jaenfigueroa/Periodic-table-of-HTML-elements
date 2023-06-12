@@ -1,0 +1,13 @@
+.button {
+  width: max-content;
+  padding: 0 1rem;
+  border-radius: .5rem;
+  border: 1px solid #afafaf;
+  background: transparent;
+  transition: 100ms;
+
+  &:hover {
+    background: #f5f5f5;
+    transform: translateY(3px);
+  }
+}

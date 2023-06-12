@@ -1,5 +1,5 @@
 import './Deprecados.scss'
-import { Element } from '../../atoms/Element/Element'
+import { Element } from '../Element/Element'
 import { DEPRECADOS_lIST } from './data/DeprecadosList'
 
 export const Deprecados = () => {

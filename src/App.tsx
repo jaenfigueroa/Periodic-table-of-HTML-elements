@@ -1,4 +1,4 @@
-import { Modal } from './components/atoms/Modal/Modal'
+import { Modal } from './components/Modal/Modal'
 import { Home } from './pages/Home/Home'
 import './styles/index.scss'
 

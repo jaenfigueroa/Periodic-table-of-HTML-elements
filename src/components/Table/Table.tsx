@@ -1,5 +1,5 @@
-import { ItemHTML } from '../../../types/periodicTable'
-import { Element } from '../../atoms/Element/Element'
+import { ItemHTML } from '../../types/periodicTable'
+import { Element } from '../Element/Element'
 import './Table.scss'
 
 type Props = {

@@ -1,10 +1,10 @@
 import './Home.scss'
-import { elementsData2 } from '../../data/elementsData2'
-import { Main } from '../../components/organisms/Main/Main'
-import { Header } from '../../components/atoms/Header/Header'
-import { Table } from '../../components/molecules/Table/Table'
-import { Distribution } from '../../components/molecules/Distribution/Distribution'
-import { Deprecados } from '../../components/molecules/Deprecados/Deprecados'
+import { ELEMENTS_ES } from '../../data/elements_es'
+import { Main } from '../../components/Main/Main'
+import { Header } from '../../components/Header/Header'
+import { Table } from '../../components/Table/Table'
+import { Distribution } from '../../components/Distribution/Distribution'
+import { Deprecados } from '../../components/Deprecados/Deprecados'
 
 export const Home = () => {
   return (
@@ -12,14 +12,14 @@ export const Home = () => {
       <Header/>
       <Main>
         <div className='table-container'>
-          <Table periodicContent={elementsData2.elements} />
+          <Table periodicContent={ELEMENTS_ES.elements} />
           <details>
             <summary>Ver elementos obsoletos o deprecados</summary>
             <div className='container-deprecados'>
               <Deprecados />
             </div>
           </details>
-          <Distribution distributionContent={elementsData2.distribution} />
+          <Distribution distributionContent={ELEMENTS_ES.distribution} />
         </div>
       </Main>
     </section>
