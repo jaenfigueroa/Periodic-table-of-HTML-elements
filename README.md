@@ -15,7 +15,7 @@ Una clasificación clara según su función de los elementos HTML, cada uno con 
 
 ## 💡 Vista previa
 
-![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1686512885/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5173-2023-06-11-14_46_45_1_eio8vc.png)
+![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1686540583/MI-NUBE/PERIODIC%20TABLE/screencapture-localhost-5173-2023-06-11-22_28_24_1_kxroha.png)
 
 ![screenshot](https://res.cloudinary.com/djksz5k3c/image/upload/v1686512988/MI-NUBE/PERIODIC%20TABLE/Captura_de_pantalla_2023-06-11_144851_1_tlm7un.png)
 
