@@ -1,4 +1,4 @@
-import { Data } from '../../../../types/periodicTable'
+import { Data } from '../../../types/periodicTable'
 
 export const DEPRECADOS_lIST:Data =   {
   title: 'Deprecados',
