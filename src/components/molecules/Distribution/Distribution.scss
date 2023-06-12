@@ -1,8 +1,70 @@
 .distribution {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-items: center;
-  margin: 0 auto;
-  width: 100%;
+  grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6"
+    "item7"
+    "item8"
+    "item9"
+    "item10"
+    "item11"
+    "item12"
+    "item13"
+    "item14"
+    "item15"
+    "item16"
+    "item17"
+    "item17"
+    "item18"
+    "item19"
+    "item20"
+    "item21";
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0 4rem;
   max-width: 1100px;
+  margin: 0 auto;
+
+  @for $i from 1 through 20 {
+    &__item#{$i} {
+      grid-area: item#{$i};
+    }
+  }
+
+  @media (min-width: 640px) {
+    grid-template-areas:
+      "item1 item11"
+      "item2 item12"
+      "item3 item13"
+      "item4 item14"
+      "item5 item15"
+      "item6 item16"
+      "item7 item17"
+      "item8 item18"
+      "item9 item19"
+      "item10 item20";
+  }
+
+  @media (min-width: 890px) {
+    grid-template-areas:
+      "item1 item8 item15"
+      "item2 item9 item16"
+      "item3 item10 item17"
+      "item4 item11 item18"
+      "item5 item12 item19"
+      "item6 item13 item20"
+      "item7 item14 item21";
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-areas:
+      "item1 item6 item11 item16"
+      "item2 item7 item12 item17"
+      "item3 item8 item13 item18"
+      "item4 item9 item14 item19"
+      "item5 item10 item15 item20";
+  }
 }
