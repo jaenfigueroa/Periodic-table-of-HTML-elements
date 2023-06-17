@@ -5,10 +5,10 @@
 Una clasificación clara según su función de los elementos HTML, cada uno con una descripción concisa, ejemplos de código y previsualización. Ideal para desarrolladores web en busca de una referencia rápida, práctica y actualizada. Además, incluye una sección de elementos deprecados que proporciona información sobre por qué se desaconseja su uso y ofrece alternativas actualizadas.
 
 <div>
-  <img src="https://img.shields.io/github/stars/jaenfigueroa/Periodic-table-of-HTML-elements-new">
-  <img src="https://img.shields.io/github/forks/jaenfigueroa/Periodic-table-of-HTML-elements-new">
-  <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/Periodic-table-of-HTML-elements-new">
-  <img src="https://img.shields.io/github/issues/jaenfigueroa/Periodic-table-of-HTML-elements-new">
+  <img src="https://img.shields.io/github/stars/jaenfigueroa/Periodic-table-of-HTML-elements">
+  <img src="https://img.shields.io/github/forks/jaenfigueroa/Periodic-table-of-HTML-elements">
+  <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/Periodic-table-of-HTML-elements">
+  <img src="https://img.shields.io/github/issues/jaenfigueroa/Periodic-table-of-HTML-elements">
 </div>
 
 </div>
